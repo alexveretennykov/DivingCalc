@@ -1,13 +1,14 @@
 package com.example.divecalculator
 
 import android.os.Bundle
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import androidx.compose.ui.graphics.Color
 import androidx.fragment.app.Fragment
 import com.example.divecalculator.databinding.SacFragmentBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class SacFragment: Fragment() {
     private lateinit var binding: SacFragmentBinding
@@ -25,23 +26,13 @@ class SacFragment: Fragment() {
         binding = SacFragmentBinding.inflate(inflater, container, false)
 
         // Inicializa los listeners de Botones 'Eliminar Botella'
-        initListenerDeleteButtons()
+        initButtonListeners()
 
         // Guarda los bloques de botellas en una lista
         listBottles = getAllBottleLayouts()
 
         // Oculta todos los layouts, menos el primero
         hideBottleLayouts()
-
-        // Boton Añadir Botellas
-        binding.btnAddBottle.setOnClickListener {
-            addBottle()
-        }
-
-        // Boton Calcular SAC
-        binding.btnCalcSac.setOnClickListener {
-            calcTotalSac()
-        }
 
         return binding.root
     }
@@ -69,8 +60,32 @@ class SacFragment: Fragment() {
     }
 
     // Click Listeners de la imagen de ocultar botellas
-    private fun initListenerDeleteButtons(){
+    private fun initButtonListeners(){
 
+        // Boton Info SAC
+        binding.btnInfoSac.setOnClickListener {
+            dialogInfoSac()
+        }
+
+        // Boton Añadir Botellas
+        binding.btnAddBottle.setOnClickListener {
+            addBottle()
+        }
+
+        // Boton Calcular SAC
+        binding.btnCalcSac.setOnClickListener {
+            calcTotalSac()
+        }
+
+        binding.btnViewHistorySac.setOnClickListener{
+            // TODO() -> Mostrar listado o grafica del historial
+        }
+
+        binding.btnSaveSac.setOnClickListener {
+            // TODO() -> Guardar el resultado en local ¿Sqlite?
+        }
+
+        // Listeners de la imagen 'Delete' para ocultar los bloques de botellas
         binding.btnDeleteBottle1.setOnClickListener {
             binding.linearLayoutBottle1.visibility = View.GONE
         }
@@ -126,16 +141,13 @@ class SacFragment: Fragment() {
     // Calcula SAC - Botella 2
     private fun calcSac1():Double{
         if(binding.linearLayoutBottle1.visibility == View.VISIBLE && checkNotNullTextView1()){
-            // Presion Consumida
-            val bar = binding.etInitPressure1.text.toString().toInt() - binding.etFinPressure1.text.toString().toInt()
-            // Litros de Gas Consumidos
-            val liters = bar * binding.etBottleVolume1.text.toString().toInt()
-            // ATA profundidad
-            val depth = binding.etAvg1.text.toString().toDouble() / 10 + 1
-            // SAC
-            val sac = (liters / binding.etDiveTime1.text.toString().toInt()) / depth
+            val initPress = binding.etInitPressure1.text.toString().toInt()
+            val finPress = binding.etFinPressure1.text.toString().toInt()
+            val bottleVolume = binding.etBottleVolume1.text.toString().toInt()
+            val avgDepth = binding.etAvg1.text.toString().toDouble()
+            val diveTime = binding.etDiveTime1.text.toString().toInt()
 
-            return sac
+            return ( ((initPress - finPress) * bottleVolume) / (avgDepth / 10 + 1) ) / diveTime
         }else{
             return -1.0
         }
@@ -144,16 +156,13 @@ class SacFragment: Fragment() {
     // Calcula SAC - Botella 2
     private fun calcSac2():Double{
         if(binding.linearLayoutBottle2.visibility == View.VISIBLE && checkNotNullTextView2()){
-            // Presion Consumida
-            val bar = binding.etInitPressure2.text.toString().toInt() - binding.etFinPressure2.text.toString().toInt()
-            // Litros de Gas Consumidos
-            val liters = bar * binding.etBottleVolume2.text.toString().toInt()
-            // ATA profundidad
-            val depth = binding.etAvg2.text.toString().toDouble() / 10 + 1
-            // SAC
-            val sac = (liters / binding.etDiveTime2.text.toString().toInt()) / depth
+            val initPress = binding.etInitPressure2.text.toString().toInt()
+            val finPress = binding.etFinPressure2.text.toString().toInt()
+            val bottleVolume = binding.etBottleVolume2.text.toString().toInt()
+            val avgDepth = binding.etAvg2.text.toString().toDouble()
+            val diveTime = binding.etDiveTime2.text.toString().toInt()
 
-            return sac
+            return ( ((initPress - finPress) * bottleVolume) / (avgDepth / 10 + 1) ) / diveTime
         }else{
             return -1.0
         }
@@ -162,16 +171,13 @@ class SacFragment: Fragment() {
     // Calcula SAC - Botella 3
     private fun calcSac3():Double{
         if(binding.linearLayoutBottle3.visibility == View.VISIBLE && checkNotNullTextView3()){
-            // Presion Consumida
-            val bar = binding.etInitPressure3.text.toString().toInt() - binding.etFinPressure3.text.toString().toInt()
-            // Litros de Gas Consumidos
-            val liters = bar * binding.etBottleVolume3.text.toString().toInt()
-            // ATA profundidad
-            val depth = binding.etAvg3.text.toString().toDouble() / 10 + 1
-            // SAC
-            val sac = (liters / binding.etDiveTime3.text.toString().toInt()) / depth
+            val initPress = binding.etInitPressure3.text.toString().toInt()
+            val finPress = binding.etFinPressure3.text.toString().toInt()
+            val bottleVolume = binding.etBottleVolume3.text.toString().toInt()
+            val avgDepth = binding.etAvg3.text.toString().toDouble()
+            val diveTime = binding.etDiveTime3.text.toString().toInt()
 
-            return sac
+            return ( ((initPress - finPress) * bottleVolume) / (avgDepth / 10 + 1) ) / diveTime
         }else{
             return -1.0
         }
@@ -316,6 +322,15 @@ class SacFragment: Fragment() {
         }
 
         return result
+    }
+
+    private fun dialogInfoSac() {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(R.string.what_is_sac))
+            .setMessage(Html.fromHtml(resources.getString(R.string.infoSacDescription), Html.FROM_HTML_MODE_LEGACY))
+            .setPositiveButton("OK") { _, _ -> Unit }
+            .setCancelable(true)
+            .show()
     }
 
 }

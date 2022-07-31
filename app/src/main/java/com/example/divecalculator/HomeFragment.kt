@@ -34,7 +34,7 @@ class HomeFragment: Fragment() {
             viewModel.addClick()
 
             if (viewModel.runAd()){
-                Toast.makeText(requireContext(), "Anuncio", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), "Mostrar Anuncio", Toast.LENGTH_LONG).show()
             }
 
             findNavController().navigate(R.id.action_homeFragment_to_sacFragment)

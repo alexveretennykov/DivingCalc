@@ -1,3 +1,38 @@
 <resources>
     <string name="app_name">Dive Calculator</string>
+    <string name="sac_long">Surface Air Consumption</string>
+    <string name="calculators">Calculators</string>
+    <string name="infoSacDescription">
+        <![CDATA[<b>Surface Air Consumption</b> is an expression of your air consumption
+        during the dive at sea (surface) level. As we all know, air consumption increases with depth
+        because pressure increases, which reduces the volume of the gas, increasing the density of
+        the air we breathe (as per Boyle’s Law).
+
+        <br><br><b>Why is it important to know your SAC?</b>
+        <br>The two things that determine our bottom time are the breathing gas used and the No
+        Decompression Limits (NDL). So you will surely need to know how much breathing gas you
+        will need for a dive and that is why you need to calculate your SAC rate. Knowing the average
+        depth of the dive (AVG) and the SAC, we can calculate the minimum gas that we are going to need,
+        from there we can choose the volume of our tank and/or modify the dive plan.
+
+        <br><br><b>What Is A Good SAC Rate?</b>
+        <br>There is no such thing as a good or bad SAC rate as this will differ between diver to diver.
+        On average a new diver may equate a 25 or 27 litres per minute but a relaxed and experienced
+        diver may equate 15 to 18 litres per minute.
+
+        <br><br><b>What Affects SAC Rate?</b>
+        <br>-Stress
+        <br>-Exertion
+        <br>-Physical shape
+        <br>-Buoyancy
+        <br>-Breathing
+        <br>-Coldness
+
+        <br><br><b>How Can I Decrease My SAC Rate?</b>
+        <br>Dive more to get more experience, better buoyancy, reduce stress and exertion. Stay in
+        good physical shape, which improves oxygen consumption and improves breathing. Wear a suitable
+        suit, so as not to get cold throughout the dive.
+        ]]>
+    </string>
+    <string name="what_is_sac">What is SAC?</string>
 </resources>
