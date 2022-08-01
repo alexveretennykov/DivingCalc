@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.example.divecalculator.databinding.ActivityMainBinding
+import com.google.android.gms.ads.MobileAds
 
 class MainActivity : FragmentActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,6 +16,8 @@ class MainActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MobileAds.initialize(this) {}
     }
 
 }

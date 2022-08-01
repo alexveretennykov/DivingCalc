@@ -2,13 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/primary_ultra_light">
 
     <!-- Menu Superior -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/headerHome"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:background="@color/primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -17,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/calculators"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="@color/primary"
             android:src="@drawable/ic_info"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,15 +40,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Línea Divisora -->
-    <View
-        android:id="@+id/dividing_line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/purple_500"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerHome" />
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -59,7 +52,7 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dividing_line">
+        app:layout_constraintTop_toBottomOf="@+id/headerHome">
 
         <Button
             android:id="@+id/btn_Mod"

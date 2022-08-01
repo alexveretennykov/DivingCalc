@@ -2,7 +2,7 @@
     <string name="app_name">Dive Calculator</string>
     <string name="sac_long">Surface Air Consumption</string>
     <string name="calculators">Calculators</string>
-    <string name="infoSacDescription">
+    <string name="infoSacHtml">
         <![CDATA[<b>Surface Air Consumption</b> is an expression of your air consumption
         during the dive at sea (surface) level. As we all know, air consumption increases with depth
         because pressure increases, which reduces the volume of the gas, increasing the density of
@@ -35,4 +35,23 @@
         ]]>
     </string>
     <string name="what_is_sac">What is SAC?</string>
+    <string name="scuba_tank_1">Scuba Tank 1</string>
+    <string name="scuba_tank_2">Scuba Tank 2</string>
+    <string name="scuba_tank_3">Scuba Tank 3</string>
+    <string name="delete_tank_1">Delete Tank 1</string>
+    <string name="delete_tank_2">Delete Tank 2</string>
+    <string name="delete_tank_3">Delete Tank 3</string>
+    <string name="info_whats_is_sac">Info - Whats is SAC?</string>
+    <string name="tank_volume">Tank Volume</string>
+    <string name="initial_pressure">Initial Pressure</string>
+    <string name="final_pressure">Final Pressure</string>
+    <string name="average_depth">Average Depth</string>
+    <string name="dive_time">Dive Time</string>
+    <string name="total_sac">Total SAC</string>
+    <string name="view_history">View History</string>
+    <string name="save_sac_in_history">Save SAC in History</string>
+    <string name="add_tank">Add Tank</string>
+    <string name="calculate">Calculate</string>
+    <string name="hint_total_sac">0.00 l/min</string>
+    <string name="required">required</string>
 </resources>

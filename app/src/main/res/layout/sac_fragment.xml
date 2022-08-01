@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@color/primary_ultra_light"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,13 +11,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/menuDivelogDetails"
         android:layout_width="match_parent"
+        android:background="@color/primary"
         android:layout_height="50dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sac_long"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -29,20 +31,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="@color/primary"
             android:src="@drawable/ic_info"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/info_whats_is_sac" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Línea Divisora -->
-    <View
-        android:id="@+id/dividing_line"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/purple_500" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -59,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/shape_gray"
+                android:background="@drawable/shape_white"
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -70,9 +66,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Botella 1"
+                        android:text="@string/scuba_tank_1"
                         android:textAlignment="center"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -88,7 +84,9 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:visibility="visible" />
+                        tools:visibility="visible"
+                        android:contentDescription="@string/delete_tank_1" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -102,15 +100,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Volumen botella" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/tank_volume" />
 
                     <EditText
                         android:id="@+id/et_BottleVolume1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="15 L" />
+                        android:inputType="number" />
 
                 </LinearLayout>
 
@@ -125,15 +123,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Presion inicial" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/initial_pressure" />
 
                     <EditText
                         android:id="@+id/et_InitPressure1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="210 bar" />
+                        android:inputType="number" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -147,15 +145,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Presion final" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/final_pressure" />
 
                     <EditText
                         android:id="@+id/et_FinPressure1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="60 bar" />
+                        android:inputType="number" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -169,15 +167,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Profundidad media" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/average_depth" />
 
                     <EditText
                         android:id="@+id/et_Avg1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal"
-                        android:hint="16,2 m" />
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -192,15 +190,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Tiempo inmersión" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/dive_time" />
 
                     <EditText
                         android:id="@+id/et_DiveTime1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="56 min" />
+                        android:inputType="number" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -210,7 +208,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/shape_gray"
+                android:background="@drawable/shape_white"
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -221,9 +219,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Botella 2"
+                        android:text="@string/scuba_tank_2"
                         android:textAlignment="center"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -240,7 +238,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:visibility="visible" />
+                        tools:visibility="visible"
+                        android:contentDescription="@string/delete_tank_2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -254,15 +253,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Volumen botella" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/tank_volume" />
 
                     <EditText
                         android:id="@+id/et_BottleVolume2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="15 L" />
+                        android:inputType="number" />
 
                 </LinearLayout>
 
@@ -277,15 +276,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Presion inicial" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/initial_pressure" />
 
                     <EditText
                         android:id="@+id/et_InitPressure2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="210 bar" />
+                        android:inputType="number" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -299,15 +298,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Presion final" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/final_pressure" />
 
                     <EditText
                         android:id="@+id/et_FinPressure2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="60 bar" />
+                        android:inputType="number" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -321,15 +320,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Profundidad media" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/average_depth" />
 
                     <EditText
                         android:id="@+id/et_Avg2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal"
-                        android:hint="16,2 m" />
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -344,15 +343,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Tiempo inmersión" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/dive_time" />
 
                     <EditText
                         android:id="@+id/et_DiveTime2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="56 min" />
+                        android:inputType="number" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -362,7 +361,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/shape_gray"
+                android:background="@drawable/shape_white"
                 android:orientation="vertical">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -373,9 +372,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Botella 3"
+                        android:text="@string/scuba_tank_3"
                         android:textAlignment="center"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -391,7 +390,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:visibility="visible" />
+                        tools:visibility="visible"
+                        android:contentDescription="@string/delete_tank_3" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -405,15 +405,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Volumen botella" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/tank_volume" />
 
                     <EditText
                         android:id="@+id/et_BottleVolume3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="15 L" />
+                        android:inputType="number" />
 
                 </LinearLayout>
 
@@ -428,15 +428,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Presion inicial" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/initial_pressure" />
 
                     <EditText
                         android:id="@+id/et_InitPressure3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="210 bar" />
+                        android:inputType="number" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -450,15 +450,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Presion final" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/final_pressure" />
 
                     <EditText
                         android:id="@+id/et_FinPressure3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="60 bar" />
+                        android:inputType="number" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -472,15 +472,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Profundidad media" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/average_depth" />
 
                     <EditText
                         android:id="@+id/et_Avg3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal"
-                        android:hint="16,2 m" />
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -495,24 +495,37 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Tiempo inmersión" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/dive_time" />
 
                     <EditText
                         android:id="@+id/et_DiveTime3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:hint="56 min" />
+                        android:inputType="number"/>
                 </LinearLayout>
             </LinearLayout>
+
+            <!-- Bloque Anuncios Admob -->
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/sacAdmobBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+            </com.google.android.gms.ads.AdView>
 
             <!-- Total SAC -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/shape_gray"
+                android:background="@drawable/shape_white"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -521,10 +534,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="SAC Total"
+                    android:text="@string/total_sac"
                     android:background="@drawable/shape_blue"
                     android:textAlignment="center"
-                    android:textColor="@color/teal_200"
+                    android:textColor="@color/primary_ultra_dark"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -538,9 +551,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:textAlignment="center"
+                    android:textColor="@color/text_color"
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    android:hint="0.00 l/min" />
+                    android:text="@string/hint_total_sac" />
 
 
                 <LinearLayout
@@ -557,15 +571,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
-                        android:textSize="10sp"
-                        android:text="Ver Historial" />
+                        android:textSize="11sp"
+                        android:text="@string/view_history" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btn_saveSac"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="10sp"
-                        android:text="Guardar Sac en Historial" />
+                        android:textSize="11sp"
+                        android:text="@string/save_sac_in_history" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -581,14 +595,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="Añadir Botella" />
+                    android:text="@string/add_tank" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_calcSac"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="Calcular" />
+                    android:text="@string/calculate" />
 
             </LinearLayout>
 

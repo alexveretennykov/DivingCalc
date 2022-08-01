@@ -1,11 +1,11 @@
-package com.example.divecalculator
+package com.example.divecalculator.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
-class ViewModel(app: Application) : AndroidViewModel(app)  {
+class MainViewModel(app: Application) : AndroidViewModel(app)  {
 
     private val _clicks = MutableLiveData<Int>()
     var clicks: LiveData<Int> = _clicks

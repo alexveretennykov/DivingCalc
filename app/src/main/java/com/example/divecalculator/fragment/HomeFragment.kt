@@ -1,4 +1,4 @@
-package com.example.divecalculator
+package com.example.divecalculator.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,18 +8,20 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.divecalculator.R
+import com.example.divecalculator.viewmodel.MainViewModel
 import com.example.divecalculator.databinding.HomeFragmentBinding
 
 class HomeFragment: Fragment() {
     private lateinit var binding: HomeFragmentBinding
-    private lateinit var viewModel: ViewModel
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         viewModel =
             activity?.let {
-                ViewModelProvider(it)[ViewModel::class.java]
+                ViewModelProvider(it)[MainViewModel::class.java]
             }!!
     }
 
@@ -34,7 +36,7 @@ class HomeFragment: Fragment() {
             viewModel.addClick()
 
             if (viewModel.runAd()){
-                Toast.makeText(requireContext(), "Mostrar Anuncio", Toast.LENGTH_LONG).show()
+                // TODO() -> Mostrar Anuncio aplicando la logica para mostrar un anuncio que ocupe toda la pantalla
             }
 
             findNavController().navigate(R.id.action_homeFragment_to_sacFragment)
