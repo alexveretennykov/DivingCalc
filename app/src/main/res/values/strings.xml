@@ -34,14 +34,40 @@
         suit, so as not to get cold throughout the dive.
         ]]>
     </string>
+    <string name="infoCalculatorsHtml">
+        <![CDATA[
+        <ul><b>MOD</b> - Maximum Operating Depth
+        <ul><b>SAC</b> - Surface Air Consumption
+        <ul><b>EAD</b> - Equivalent Air Depth
+        <ul><b>END</b> - Equivalent Narcotic Depth
+        <ul><b>NDL</b> - No Decompression Limit
+        <ul><b>TOD</b> - Theoretical Ocean Depth
+        <ul>You will find more information inside each of the calculators.
+        ]]>
+    </string>
+    <string name="infoModHtml">
+        <![CDATA[
+
+        ]]>
+    </string>
     <string name="what_is_sac">What is SAC?</string>
+    <string name="what_is_mod">What is MOD?</string>
+    <string name="meaning_of_acronyms">Meaning of Acronyms</string>
+    <string name="info_whats_is_sac">Info - Whats is SAC?</string>
+    <string name="info_whats_is_mod">Info - Whats is MOD?</string>
+    <string name="info_meaning_of_acronyms">Info - Meaning of acronyms</string>
     <string name="scuba_tank_1">Scuba Tank 1</string>
     <string name="scuba_tank_2">Scuba Tank 2</string>
     <string name="scuba_tank_3">Scuba Tank 3</string>
+    <string name="mod_1">MOD 1</string>
+    <string name="mod_2">MOD 2</string>
+    <string name="mod_3">MOD 3</string>
     <string name="delete_tank_1">Delete Tank 1</string>
     <string name="delete_tank_2">Delete Tank 2</string>
     <string name="delete_tank_3">Delete Tank 3</string>
-    <string name="info_whats_is_sac">Info - Whats is SAC?</string>
+    <string name="delete_mod_1">Delete MOD Block 1</string>
+    <string name="delete_mod_2">Delete MOD Block 2</string>
+    <string name="delete_mod_3">Delete MOD Block 3</string>
     <string name="tank_volume">Tank Volume</string>
     <string name="initial_pressure">Initial Pressure</string>
     <string name="final_pressure">Final Pressure</string>
@@ -54,4 +80,12 @@
     <string name="calculate">Calculate</string>
     <string name="hint_total_sac">0.00 l/min</string>
     <string name="required">required</string>
+    <string name="mod_long">Maximum Operating Depth</string>
+    <string name="oxygen_percent">Oxygen Percentage</string>
+    <string name="ppo2_interest">PPO2 of Interest</string>
+    <string name="mod_12">MOD – 1.2 ppo2</string>
+    <string name="mod_14">MOD – 1.4 ppo2</string>
+    <string name="mod_16">MOD – 1.6 ppo2</string>
+    <string name="add_mod_block">Add MOD Block</string>
+    <string name="mod_user">MOD - Calculated</string>
 </resources>

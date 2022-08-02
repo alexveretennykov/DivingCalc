@@ -21,4 +21,12 @@ class MainViewModel(app: Application) : AndroidViewModel(app)  {
     fun runAd(): Boolean{
         return _clicks.value!! % 3 == 0
     }
+
+    fun loadAd(): Boolean{
+        return if(_clicks.value!! > 0) {
+            _clicks.value!! % 2 == 0
+        }else{
+            false
+        }
+    }
 }

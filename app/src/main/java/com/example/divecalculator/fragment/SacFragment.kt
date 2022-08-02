@@ -21,7 +21,7 @@ class SacFragment: Fragment() {
     private lateinit var mapEditText1: Map<SacProperty, EditText>
     private lateinit var mapEditText2: Map<SacProperty, EditText>
     private lateinit var mapEditText3: Map<SacProperty, EditText>
-    lateinit var mAdView : AdView
+    lateinit var bannerAdView : AdView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,9 +31,9 @@ class SacFragment: Fragment() {
         binding = SacFragmentBinding.inflate(inflater, container, false)
 
         // Publicidad Admob
-        mAdView = binding.sacAdmobBanner
+        bannerAdView = binding.sacAdmobBanner
         val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
+        bannerAdView.loadAd(adRequest)
 
         // Inicializa las listas
         listScubaTanks = getAllScubaTankLayouts()
@@ -71,7 +71,7 @@ class SacFragment: Fragment() {
         }
 
         binding.btnViewHistorySac.setOnClickListener{
-            // TODO() -> Mostrar listado o grafica del historial
+            // TODO() -> Mostrar listado y grafica del historial
         }
 
         binding.btnSaveSac.setOnClickListener {
@@ -101,6 +101,7 @@ class SacFragment: Fragment() {
         }
     }
 
+    // Hace visible el primer layout invisible que encuentre de Scuba Tank
     private fun addBottle(){
         // run lit@ -> break
         run lit@{
@@ -113,16 +114,16 @@ class SacFragment: Fragment() {
         }
     }
 
+    // Devuelve el listado de layout de Scuba Tank
     private fun getAllScubaTankLayouts(): List<LinearLayout>{
-        val list: MutableList<LinearLayout> = mutableListOf()
-
-        list += binding.linearLayoutBottle1
-        list += binding.linearLayoutBottle2
-        list += binding.linearLayoutBottle3
-
-        return list.toList()
+        return listOf(
+            binding.linearLayoutBottle1,
+            binding.linearLayoutBottle2,
+            binding.linearLayoutBottle3
+        )
     }
 
+    // Devuelve el Map de todos los EditTExt de de Scuba Tank 1
     private fun getEditTextFromScubaTank1(): Map<SacProperty, EditText> {
         return mapOf(
             SacProperty.VOLUME to binding.etBottleVolume1,
@@ -133,6 +134,7 @@ class SacFragment: Fragment() {
         )
     }
 
+    // Devuelve el Map de todos los EditTExt de de Scuba Tank 2
     private fun getEditTextFromScubaTank2(): Map<SacProperty, EditText>{
         return mapOf(
             SacProperty.VOLUME to binding.etBottleVolume2,
@@ -143,6 +145,7 @@ class SacFragment: Fragment() {
         )
     }
 
+    // Devuelve el Map de todos los EditTExt de de Scuba Tank 3
     private fun getEditTextFromScubaTank3(): Map<SacProperty, EditText>{
         return mapOf(
             SacProperty.VOLUME to binding.etBottleVolume3,
@@ -153,7 +156,8 @@ class SacFragment: Fragment() {
         )
     }
 
-    // Focus Change Listeners de los EditText
+    // Inicializa Listeners que se ejecutan al cambiar el Focus de los EditText
+    // Añade/elimina las unidades de medicion de cada campo
     private fun initEditTextListeners(){
         mapEditText1.forEach { (t, u) ->
             u.setOnFocusChangeListener { _, hasFocus ->
@@ -199,6 +203,7 @@ class SacFragment: Fragment() {
         }
     }
 
+    // Añade/elimina las unidades de medicion de cada campo, a parte añade la la pista de ayuda
     private fun setStyleEditText(et: EditText, hasFocus: Boolean, enum: SacProperty){
         val unit = getMeasurementUnitFromEnum(enum)
         val hint = getHintFromEnum(enum)
@@ -220,14 +225,14 @@ class SacFragment: Fragment() {
         }
     }
 
-    // Oculta todos los layout, menos el primero
+    // Oculta todos los layout Scuba Tank, menos el primero
     private fun hideScubaTankLayouts(){
         listScubaTanks.forEach { it.visibility = View.GONE }
 
         listScubaTanks[0].visibility = View.VISIBLE
     }
 
-    // Calcula SAC Total
+    // Calcula SAC Total de todos los Scuba Tank activos (visibles)
     private fun calcTotalSac(){
         var total = 0.0
         var count = 0

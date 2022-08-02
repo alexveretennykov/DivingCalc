@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_sacFragment"
             app:destination="@id/sacFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_modFragment"
+            app:destination="@id/modFragment" />
     </fragment>
 
     <fragment
@@ -22,6 +25,16 @@
         tools:layout="@layout/sac_fragment">
         <action
             android:id="@+id/action_sacFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/modFragment"
+        android:name="com.example.divecalculator.fragment.ModFragment"
+        android:label="SacFragment"
+        tools:layout="@layout/mod_fragment">
+        <action
+            android:id="@+id/action_modFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

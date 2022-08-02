@@ -7,7 +7,7 @@
 
     <!-- Menu Superior -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/headerHome"
+        android:id="@+id/headerHomeFragment"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/primary"
@@ -36,7 +36,8 @@
             android:src="@drawable/ic_info"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/info_meaning_of_acronyms"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -52,14 +53,13 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/headerHome">
+        app:layout_constraintTop_toBottomOf="@+id/headerHomeFragment">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_Mod"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:clickable="false"
             android:text="MOD" />
 
         <com.google.android.material.button.MaterialButton

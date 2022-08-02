@@ -9,7 +9,7 @@
 
     <!-- Menu Superior -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/headerSacFragment"
+        android:id="@+id/headerModFragment"
         android:layout_width="match_parent"
         android:background="@color/primary"
         android:layout_height="50dp">
@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sac_long"
+            android:text="@string/mod_long"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/btn_infoSac"
+            android:id="@+id/btn_infoMod"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -36,7 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/info_whats_is_sac" />
+            android:contentDescription="@string/info_whats_is_mod" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -49,9 +49,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Bottle 1 -->
+            <!-- MOD 1 -->
             <LinearLayout
-                android:id="@+id/linearLayout_bottle1"
+                android:id="@+id/linearLayout_mod1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -66,7 +66,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/scuba_tank_1"
+                        android:text="@string/mod_1"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -77,7 +77,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteBottle1"
+                        android:id="@+id/btn_deleteMod1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -85,7 +85,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_tank_1" />
+                        android:contentDescription="@string/delete_mod_1" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -101,14 +101,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/tank_volume" />
+                        android:text="@string/oxygen_percent" />
 
                     <EditText
-                        android:id="@+id/et_BottleVolume1"
+                        android:id="@+id/et_OxygenPercentage_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:maxLength="2" />
 
                 </LinearLayout>
 
@@ -124,14 +125,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/initial_pressure" />
+                        android:text="@string/ppo2_interest" />
 
                     <EditText
-                        android:id="@+id/et_InitPressure1"
+                        android:id="@+id/et_UserPpo_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:inputType="numberDecimal"
+                        android:maxLength="4" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -146,14 +148,47 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/final_pressure" />
+                        android:text="@string/mod_user" />
 
                     <EditText
-                        android:id="@+id/et_FinPressure1"
+                        android:id="@+id/et_Result_Mod_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="@color/primary_light"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/mod_12" />
+
+                    <EditText
+                        android:id="@+id/et_Ppo_12_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -168,14 +203,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/average_depth" />
+                        android:text="@string/mod_14" />
 
                     <EditText
-                        android:id="@+id/et_Avg1"
+                        android:id="@+id/et_Ppo_14_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -191,20 +227,21 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/dive_time" />
+                        android:text="@string/mod_16" />
 
                     <EditText
-                        android:id="@+id/et_DiveTime1"
+                        android:id="@+id/et_Ppo_16_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Bottle 2 -->
+            <!-- MOD 2 -->
             <LinearLayout
-                android:id="@+id/linearLayout_bottle2"
+                android:id="@+id/linearLayout_mod2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -219,7 +256,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/scuba_tank_2"
+                        android:text="@string/mod_2"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -231,7 +268,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteBottle2"
+                        android:id="@+id/btn_deleteMod2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -239,7 +276,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_tank_2" />
+                        android:contentDescription="@string/delete_mod_2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -254,14 +291,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/tank_volume" />
+                        android:text="@string/oxygen_percent" />
 
                     <EditText
-                        android:id="@+id/et_BottleVolume2"
+                        android:id="@+id/et_OxygenPercentage_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:maxLength="2" />
 
                 </LinearLayout>
 
@@ -277,14 +315,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/initial_pressure" />
+                        android:text="@string/ppo2_interest" />
 
                     <EditText
-                        android:id="@+id/et_InitPressure2"
+                        android:id="@+id/et_UserPpo_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:inputType="numberDecimal"
+                        android:maxLength="4" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -299,14 +338,47 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/final_pressure" />
+                        android:text="@string/mod_user" />
 
                     <EditText
-                        android:id="@+id/et_FinPressure2"
+                        android:id="@+id/et_Result_Mod_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="@color/primary_light"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/mod_12" />
+
+                    <EditText
+                        android:id="@+id/et_Ppo_12_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -321,14 +393,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/average_depth" />
+                        android:text="@string/mod_14" />
 
                     <EditText
-                        android:id="@+id/et_Avg2"
+                        android:id="@+id/et_Ppo_14_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -344,20 +417,21 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/dive_time" />
+                        android:text="@string/mod_16" />
 
                     <EditText
-                        android:id="@+id/et_DiveTime2"
+                        android:id="@+id/et_Ppo_16_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Bottle 3 -->
+            <!-- MOD 3 -->
             <LinearLayout
-                android:id="@+id/linearLayout_bottle3"
+                android:id="@+id/linearLayout_mod3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -372,7 +446,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/scuba_tank_3"
+                        android:text="@string/mod_3"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -383,15 +457,15 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteBottle3"
+                        android:id="@+id/btn_deleteMod3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:contentDescription="@string/delete_mod_3"
                         android:src="@drawable/ic_remove"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:visibility="visible"
-                        android:contentDescription="@string/delete_tank_3" />
+                        tools:visibility="visible" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -406,14 +480,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/tank_volume" />
+                        android:text="@string/oxygen_percent" />
 
                     <EditText
-                        android:id="@+id/et_BottleVolume3"
+                        android:id="@+id/et_OxygenPercentage_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:maxLength="2" />
 
                 </LinearLayout>
 
@@ -429,14 +504,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/initial_pressure" />
+                        android:text="@string/ppo2_interest" />
 
                     <EditText
-                        android:id="@+id/et_InitPressure3"
+                        android:id="@+id/et_UserPpo_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:inputType="numberDecimal"
+                        android:maxLength="4" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -451,14 +527,47 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/final_pressure" />
+                        android:text="@string/mod_user" />
 
                     <EditText
-                        android:id="@+id/et_FinPressure3"
+                        android:id="@+id/et_Result_Mod_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number" />
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="13dp"
+                    android:background="@color/primary_light"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/mod_12" />
+
+                    <EditText
+                        android:id="@+id/et_Ppo_12_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -473,14 +582,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/average_depth" />
+                        android:text="@string/mod_14" />
 
                     <EditText
-                        android:id="@+id/et_Avg3"
+                        android:id="@+id/et_Ppo_14_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -496,14 +606,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/dive_time" />
+                        android:text="@string/mod_16" />
 
                     <EditText
-                        android:id="@+id/et_DiveTime3"
+                        android:id="@+id/et_Ppo_16_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"/>
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -520,68 +631,6 @@
                 ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
             </com.google.android.gms.ads.AdView>
 
-            <!-- Total SAC -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/shape_white"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_header">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/total_sac"
-                    android:background="@drawable/shape_blue"
-                    android:textAlignment="center"
-                    android:textColor="@color/primary_ultra_dark"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_totalSac"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/text_color"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:text="@string/hint_total_sac" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btn_viewHistorySac"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:textSize="11sp"
-                        android:text="@string/view_history" />
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btn_saveSac"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="11sp"
-                        android:text="@string/save_sac_in_history" />
-                </LinearLayout>
-            </LinearLayout>
-
             <!-- Buttons End -->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -590,14 +639,14 @@
                 android:orientation="horizontal" >
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_addBottle"
+                    android:id="@+id/btn_addModBlock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/add_tank" />
+                    android:text="@string/add_mod_block" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_calcSac"
+                    android:id="@+id/btn_calcMod"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
