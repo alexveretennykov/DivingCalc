@@ -110,8 +110,14 @@
                         android:layout_weight="0.5"
                         android:inputType="number"
                         android:maxLength="2" />
-
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/oxygen_gas_mixture" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -135,6 +141,13 @@
                         android:inputType="numberDecimal"
                         android:maxLength="4" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/custom_po2" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -158,6 +171,13 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/for_custom_po2" />
 
                 <View
                     android:layout_width="match_parent"
@@ -190,6 +210,13 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_tech_dive" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -213,13 +240,19 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_recreational_dive" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -237,6 +270,14 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_decompresion" />
             </LinearLayout>
 
             <!-- MOD 2 -->
@@ -300,8 +341,14 @@
                         android:layout_weight="0.5"
                         android:inputType="number"
                         android:maxLength="2" />
-
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/oxygen_gas_mixture" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -325,6 +372,13 @@
                         android:inputType="numberDecimal"
                         android:maxLength="4" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/custom_po2" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -348,6 +402,13 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/for_custom_po2" />
 
                 <View
                     android:layout_width="match_parent"
@@ -380,6 +441,13 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_tech_dive" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -403,13 +471,19 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_recreational_dive" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -427,6 +501,14 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_decompresion" />
             </LinearLayout>
 
             <!-- MOD 3 -->
@@ -489,8 +571,14 @@
                         android:layout_weight="0.5"
                         android:inputType="number"
                         android:maxLength="2" />
-
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/oxygen_gas_mixture" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -514,6 +602,13 @@
                         android:inputType="numberDecimal"
                         android:maxLength="4" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/custom_po2" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -537,6 +632,13 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/for_custom_po2" />
 
                 <View
                     android:layout_width="match_parent"
@@ -569,6 +671,13 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_tech_dive" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -592,13 +701,19 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_recreational_dive" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -616,6 +731,14 @@
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_decompresion" />
             </LinearLayout>
 
             <!-- Bloque Anuncios Admob -->

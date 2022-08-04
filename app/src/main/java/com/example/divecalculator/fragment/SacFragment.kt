@@ -123,7 +123,7 @@ class SacFragment: Fragment() {
         )
     }
 
-    // Devuelve el Map de todos los EditTExt de de Scuba Tank 1
+    // Devuelve el Map de todos los EditTExt de Scuba Tank 1
     private fun getEditTextFromScubaTank1(): Map<SacProperty, EditText> {
         return mapOf(
             SacProperty.VOLUME to binding.etBottleVolume1,
@@ -134,7 +134,7 @@ class SacFragment: Fragment() {
         )
     }
 
-    // Devuelve el Map de todos los EditTExt de de Scuba Tank 2
+    // Devuelve el Map de todos los EditTExt de Scuba Tank 2
     private fun getEditTextFromScubaTank2(): Map<SacProperty, EditText>{
         return mapOf(
             SacProperty.VOLUME to binding.etBottleVolume2,
@@ -145,7 +145,7 @@ class SacFragment: Fragment() {
         )
     }
 
-    // Devuelve el Map de todos los EditTExt de de Scuba Tank 3
+    // Devuelve el Map de todos los EditTExt de Scuba Tank 3
     private fun getEditTextFromScubaTank3(): Map<SacProperty, EditText>{
         return mapOf(
             SacProperty.VOLUME to binding.etBottleVolume3,

@@ -8,7 +8,7 @@
         because pressure increases, which reduces the volume of the gas, increasing the density of
         the air we breathe (as per Boyle’s Law).
 
-        <br><br><b>Why is it important to know your SAC?</b>
+        <ul><b>Why is it important to know your SAC?</b>
         <br>The two things that determine our bottom time are the breathing gas used and the No
         Decompression Limits (NDL). So you will surely need to know how much breathing gas you
         will need for a dive and that is why you need to calculate your SAC rate. Knowing the average
@@ -20,7 +20,7 @@
         On average a new diver may equate a 25 or 27 litres per minute but a relaxed and experienced
         diver may equate 15 to 18 litres per minute.
 
-        <br><br><b>What Affects SAC Rate?</b>
+        <ul><b>What Affects SAC Rate?</b>
         <br>-Stress
         <br>-Exertion
         <br>-Physical shape
@@ -28,7 +28,7 @@
         <br>-Breathing
         <br>-Coldness
 
-        <br><br><b>How Can I Decrease My SAC Rate?</b>
+        <ul><b>How Can I Decrease My SAC Rate?</b>
         <br>Dive more to get more experience, better buoyancy, reduce stress and exertion. Stay in
         good physical shape, which improves oxygen consumption and improves breathing. Wear a suitable
         suit, so as not to get cold throughout the dive.
@@ -47,6 +47,29 @@
     </string>
     <string name="infoModHtml">
         <![CDATA[
+            A <b>Maximum Operating Depth</b> is a depth limit based on the percentage of oxygen in a
+            diver\'s breathing gas. With the higher concentration of oxygen in the gas, the lower
+            will be the maximum depth.
+
+            <ul><b>Why Should a Diver Calculate a MOD?</b>
+            <br>Oxygen becomes toxic with depth, the higher the percentage of oxygen in the
+            breathing gas, the lower the depth at which it becomes toxic.
+
+            <ul><b>What happens if I exceed the MOD limit?</b>
+            <br>Excessive doses of oxygen at high partial pressures can cause CNS toxicity and
+            pulmonary intoxication.
+
+            <br><br>CNS toxicity is a toxic effect that can cause seizures (drowning).
+            Its predictability is limited and survival is low.
+
+            <ul><b>Symptoms CNS toxicity may include:</b>
+            <br>- Seizures
+            <br>- Tunnel vision
+            <br>- Auditory noises
+            <br>- Nausea
+            <br>- Tics
+            <br>- Dizziness
+            <br>- Irritability
 
         ]]>
     </string>
@@ -88,4 +111,10 @@
     <string name="mod_16">MOD – 1.6 ppo2</string>
     <string name="add_mod_block">Add MOD Block</string>
     <string name="mod_user">MOD - Calculated</string>
+    <string name="oxygen_gas_mixture">% of oxygen in the gas mixture</string>
+    <string name="custom_po2">Custom PO2</string>
+    <string name="for_custom_po2">For custom PO2</string>
+    <string name="operating_limit_tech_dive">Operating limit (tech dive)</string>
+    <string name="operating_limit_recreational_dive">Operating limit (recreational dive)</string>
+    <string name="operating_limit_decompresion">Operating limit (decompresion)</string>
 </resources>
