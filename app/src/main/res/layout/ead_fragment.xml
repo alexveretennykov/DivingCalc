@@ -9,7 +9,7 @@
 
     <!-- Menu Superior -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/headerSacFragment"
+        android:id="@+id/headerEadFragment"
         android:layout_width="match_parent"
         android:background="@color/primary"
         android:layout_height="50dp">
@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sac_long"
+            android:text="@string/equivalent_air_depth"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/btn_infoSac"
+            android:id="@+id/btn_infoEad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -36,7 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/info_whats_is_sac" />
+            android:contentDescription="@string/info_whats_is_ead" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -49,9 +49,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Bottle 1 -->
+            <!-- EAD 1 -->
             <LinearLayout
-                android:id="@+id/linearLayout_bottle1"
+                android:id="@+id/linearLayout_ead1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -66,7 +66,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/scuba_tank_1"
+                        android:text="EAD 1"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -77,7 +77,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteBottle1"
+                        android:id="@+id/btn_deleteEad1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -85,7 +85,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_tank_1" />
+                        android:contentDescription="@string/delete_ead_1" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -101,33 +101,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/tank_volume" />
+                        android:text="@string/oxygen_percent" />
 
                     <EditText
-                        android:id="@+id/et_BottleVolume1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="number" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/initial_pressure" />
-
-                    <EditText
-                        android:id="@+id/et_InitPressure1"
+                        android:id="@+id/et_OxygenPercentage_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -146,54 +123,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/final_pressure" />
+                        android:text="@string/depth" />
 
                     <EditText
-                        android:id="@+id/et_FinPressure1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="number" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/average_depth" />
-
-                    <EditText
-                        android:id="@+id/et_Avg1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/dive_time" />
-
-                    <EditText
-                        android:id="@+id/et_DiveTime1"
+                        android:id="@+id/et_Depth1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -214,7 +147,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -222,10 +154,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/sac" />
+                        android:text="@string/equivalent_air_depth" />
 
                     <EditText
-                        android:id="@+id/et_sacCalculated_1"
+                        android:id="@+id/et_EadCalculated1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -234,9 +166,9 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Bottle 2 -->
+            <!-- EAD 2 -->
             <LinearLayout
-                android:id="@+id/linearLayout_bottle2"
+                android:id="@+id/linearLayout_ead2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -251,7 +183,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/scuba_tank_2"
+                        android:text="EAD 2"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -263,7 +195,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteBottle2"
+                        android:id="@+id/btn_deleteEad2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -271,7 +203,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_tank_2" />
+                        android:contentDescription="@string/delete_ead_2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -286,33 +218,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/tank_volume" />
+                        android:text="@string/oxygen_percent" />
 
                     <EditText
-                        android:id="@+id/et_BottleVolume2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="number" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/initial_pressure" />
-
-                    <EditText
-                        android:id="@+id/et_InitPressure2"
+                        android:id="@+id/et_OxygenPercentage_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -331,54 +240,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/final_pressure" />
+                        android:text="@string/depth" />
 
                     <EditText
-                        android:id="@+id/et_FinPressure2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="number" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/average_depth" />
-
-                    <EditText
-                        android:id="@+id/et_Avg2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/dive_time" />
-
-                    <EditText
-                        android:id="@+id/et_DiveTime2"
+                        android:id="@+id/et_Depth2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -399,7 +264,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -407,10 +271,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/sac" />
+                        android:text="@string/equivalent_air_depth" />
 
                     <EditText
-                        android:id="@+id/et_sacCalculated_2"
+                        android:id="@+id/et_EadCalculated2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -419,9 +283,9 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Bottle 3 -->
+            <!-- EAD 3 -->
             <LinearLayout
-                android:id="@+id/linearLayout_bottle3"
+                android:id="@+id/linearLayout_ead3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -436,7 +300,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/scuba_tank_3"
+                        android:text="EAD 3"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -447,7 +311,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteBottle3"
+                        android:id="@+id/btn_deleteEad3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -455,7 +319,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_tank_3" />
+                        android:contentDescription="@string/delete_ead_3" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -470,33 +334,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/tank_volume" />
+                        android:text="@string/oxygen_percent" />
 
                     <EditText
-                        android:id="@+id/et_BottleVolume3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="number" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/initial_pressure" />
-
-                    <EditText
-                        android:id="@+id/et_InitPressure3"
+                        android:id="@+id/et_OxygenPercentage_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -515,59 +356,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/final_pressure" />
+                        android:text="@string/depth" />
 
                     <EditText
-                        android:id="@+id/et_FinPressure3"
+                        android:id="@+id/et_Depth3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:inputType="number" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/average_depth" />
-
-                    <EditText
-                        android:id="@+id/et_Avg3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/dive_time" />
-
-                    <EditText
-                        android:id="@+id/et_DiveTime3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="number"/>
                 </LinearLayout>
 
                 <View
@@ -584,7 +380,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -592,10 +387,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/sac" />
+                        android:text="@string/equivalent_air_depth" />
 
                     <EditText
-                        android:id="@+id/et_sacCalculated_3"
+                        android:id="@+id/et_EadCalculated3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -607,7 +402,7 @@
             <!-- Bloque Anuncios Admob -->
             <com.google.android.gms.ads.AdView
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/sacAdmobBanner"
+                android:id="@+id/eadAdmobBanner"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -617,68 +412,6 @@
                 ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
             </com.google.android.gms.ads.AdView>
 
-            <!-- Total SAC -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/shape_white"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_header">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/total_sac"
-                    android:background="@drawable/shape_blue"
-                    android:textAlignment="center"
-                    android:textColor="@color/primary_ultra_dark"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_totalSac"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/text_color"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:text="@string/hint_total_sac" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btn_viewHistorySac"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
-                        android:textSize="11sp"
-                        android:text="@string/view_history" />
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btn_saveSac"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="11sp"
-                        android:text="@string/save_sac_in_history" />
-                </LinearLayout>
-            </LinearLayout>
-
             <!-- Buttons End -->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -687,21 +420,19 @@
                 android:orientation="horizontal" >
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_addBottle"
+                    android:id="@+id/btn_addEadBlock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/add_tank" />
+                    android:text="@string/add_ead_block" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_calcSac"
+                    android:id="@+id/btn_calcEad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="@string/calculate" />
-
             </LinearLayout>
-
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

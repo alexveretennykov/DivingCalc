@@ -3,7 +3,8 @@
     <string name="sac_long">Surface Air Consumption</string>
     <string name="calculators">Calculators</string>
     <string name="infoSacHtml">
-        <![CDATA[<b>Surface Air Consumption</b> is an expression of your air consumption
+        <![CDATA[
+        The <b>Surface Air Consumption</b> is an expression of your air consumption
         during the dive at sea (surface) level. As we all know, air consumption increases with depth
         because pressure increases, which reduces the volume of the gas, increasing the density of
         the air we breathe (as per Boyle’s Law).
@@ -47,7 +48,7 @@
     </string>
     <string name="infoModHtml">
         <![CDATA[
-            A <b>Maximum Operating Depth</b> is a depth limit based on the percentage of oxygen in a
+            The <b>Maximum Operating Depth</b> is a depth limit based on the percentage of oxygen in a
             diver\'s breathing gas. With the higher concentration of oxygen in the gas, the lower
             will be the maximum depth.
 
@@ -70,13 +71,29 @@
             <br>- Tics
             <br>- Dizziness
             <br>- Irritability
+        ]]>
+    </string>
+    <string name="infoEadHtml">
+        <![CDATA[
+            The <b>Equivalent Air Depth</b> is a way of approximating the decompression requirements
+            of breathing gas mixtures that contain nitrogen and oxygen in different proportions to
+            those in air, known as nitrox.
 
+            <ul>The equivalent air depth, for a given nitrox mix and depth, is the depth of a dive
+            when breathing air that would have the same partial pressure of nitrogen. So, for
+            example, a gas mix containing 36% oxygen (EAN36) being used at 27 metres (89 ft) has an
+            EAD of 20 metres (66 ft).
+
+            <ul>This calculator is about calculating decompression using nitrox. For calculating
+            narcotic effects using trimix, use END calculator (Equivalent narcotic depth).
         ]]>
     </string>
     <string name="what_is_sac">What is SAC?</string>
     <string name="what_is_mod">What is MOD?</string>
+    <string name="what_is_ead">What is EAD?</string>
     <string name="meaning_of_acronyms">Meaning of Acronyms</string>
     <string name="info_whats_is_sac">Info - Whats is SAC?</string>
+    <string name="info_whats_is_ead">Info - Whats is EAD?</string>
     <string name="info_whats_is_mod">Info - Whats is MOD?</string>
     <string name="info_meaning_of_acronyms">Info - Meaning of acronyms</string>
     <string name="scuba_tank_1">Scuba Tank 1</string>
@@ -91,6 +108,9 @@
     <string name="delete_mod_1">Delete MOD Block 1</string>
     <string name="delete_mod_2">Delete MOD Block 2</string>
     <string name="delete_mod_3">Delete MOD Block 3</string>
+    <string name="delete_ead_1">Delete EAD Block 1</string>
+    <string name="delete_ead_2">Delete EAD Block 2</string>
+    <string name="delete_ead_3">Delete EAD Block 3</string>
     <string name="tank_volume">Tank Volume</string>
     <string name="initial_pressure">Initial Pressure</string>
     <string name="final_pressure">Final Pressure</string>
@@ -100,6 +120,8 @@
     <string name="view_history">View History</string>
     <string name="save_sac_in_history">Save SAC in History</string>
     <string name="add_tank">Add Tank</string>
+    <string name="add_mod_block">Add MOD Block</string>
+    <string name="add_ead_block">Add EAD Block</string>
     <string name="calculate">Calculate</string>
     <string name="hint_total_sac">0.00 l/min</string>
     <string name="required">required</string>
@@ -109,7 +131,6 @@
     <string name="mod_12">MOD – 1.2 ppo2</string>
     <string name="mod_14">MOD – 1.4 ppo2</string>
     <string name="mod_16">MOD – 1.6 ppo2</string>
-    <string name="add_mod_block">Add MOD Block</string>
     <string name="mod_user">MOD - Calculated</string>
     <string name="oxygen_gas_mixture">% of oxygen in the gas mixture</string>
     <string name="custom_po2">Custom PO2</string>
@@ -117,4 +138,7 @@
     <string name="operating_limit_tech_dive">Operating limit (tech dive)</string>
     <string name="operating_limit_recreational_dive">Operating limit (recreational dive)</string>
     <string name="operating_limit_decompresion">Operating limit (decompresion)</string>
+    <string name="equivalent_air_depth">Equivalent Air Depth</string>
+    <string name="depth">Depth</string>
+    <string name="sac">SAC</string>
 </resources>

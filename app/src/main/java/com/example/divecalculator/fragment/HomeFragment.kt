@@ -45,6 +45,10 @@ class HomeFragment: Fragment() {
 
         if(viewModel.loadAd()) initAds()
 
+        binding.btnInfoHome.setOnClickListener {
+            dialogInfoCalculators()
+        }
+
         binding.btnMod.setOnClickListener {
             navigateToCalculator(R.id.action_homeFragment_to_modFragment)
         }
@@ -53,8 +57,8 @@ class HomeFragment: Fragment() {
             navigateToCalculator(R.id.action_homeFragment_to_sacFragment)
         }
 
-        binding.btnInfoHome.setOnClickListener {
-            dialogInfoCalculators()
+        binding.btnEad.setOnClickListener {
+            navigateToCalculator(R.id.action_homeFragment_to_eadFragment)
         }
 
         return binding.root

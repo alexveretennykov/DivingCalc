@@ -108,8 +108,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        android:inputType="number" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,8 +137,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal"
-                        android:maxLength="4" />
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -339,8 +337,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        android:inputType="number" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -369,8 +366,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal"
-                        android:maxLength="4" />
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -569,8 +565,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="number"
-                        android:maxLength="2" />
+                        android:inputType="number" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -599,8 +594,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
-                        android:inputType="numberDecimal"
-                        android:maxLength="4" />
+                        android:inputType="numberDecimal" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -744,7 +738,7 @@
             <!-- Bloque Anuncios Admob -->
             <com.google.android.gms.ads.AdView
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/sacAdmobBanner"
+                android:id="@+id/modAdmobBanner"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"

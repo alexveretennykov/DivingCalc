@@ -244,25 +244,39 @@ class SacFragment: Fragment() {
         if(sac1 > 0){
             total += sac1
             count ++
+
+            binding.etSacCalculated1.setText(getSacString(sac1))
+        }else{
+            binding.etSacCalculated1.setText("")
         }
 
         if(sac2 > 0){
             total += sac2
             count ++
+
+            binding.etSacCalculated2.setText(getSacString(sac2))
+        }else{
+            binding.etSacCalculated2.setText("")
         }
 
         if(sac3 > 0){
             total += sac3
             count ++
+
+            binding.etSacCalculated3.setText(getSacString(sac3))
+        }else{
+            binding.etSacCalculated3.setText("")
         }
 
         if(total/count > 0) {
-            total /= count
-            val result = String.format("%.2f", total) + " l/min"
-            binding.tvTotalSac.text = result
+            binding.tvTotalSac.text = getSacString(total/count)
         }else{
-            binding.tvTotalSac.text = "0.00 l/min"
+            binding.tvTotalSac.text = getSacString(0.00)
         }
+    }
+
+    private fun getSacString(sac: Double): String{
+        return String.format("%.2f", sac) + " l/min"
     }
 
     // Calcula SAC

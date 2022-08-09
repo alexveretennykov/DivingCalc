@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.divecalculator.R
 import com.example.divecalculator.databinding.ModFragmentBinding
@@ -18,7 +19,7 @@ import kotlin.math.floor
 
 class ModFragment: Fragment() {
     private lateinit var binding: ModFragmentBinding
-    private lateinit var listScubaTanks: List<LinearLayout>
+    private lateinit var listModLayouts: List<LinearLayout>
     private lateinit var mapEditText1: Map<ModProperty, EditText>
     private lateinit var mapEditText2: Map<ModProperty, EditText>
     private lateinit var mapEditText3: Map<ModProperty, EditText>
@@ -32,12 +33,12 @@ class ModFragment: Fragment() {
         binding = ModFragmentBinding.inflate(inflater, container, false)
 
         // Publicidad Admob
-        bannerAdView = binding.sacAdmobBanner
+        bannerAdView = binding.modAdmobBanner
         val adRequest = AdRequest.Builder().build()
         bannerAdView.loadAd(adRequest)
 
         // Inicializa las listas
-        listScubaTanks = getAllScubaTankLayouts()
+        listModLayouts = getAllModLayouts()
         mapEditText1 = getEditTextFromMod1()
         mapEditText2 = getEditTextFromMod2()
         mapEditText3 = getEditTextFromMod3()
@@ -48,19 +49,22 @@ class ModFragment: Fragment() {
         // Inicializa los listeners de Botones 'Eliminar Botella'
         initButtonListeners()
 
+        // Inicializa los listeners de Edit Text
+        initEditTextListeners()
+
         return binding.root
     }
 
-    // Click Listeners de la imagen de ocultar botellas
+    // Click Listeners de los botones/imagenes
     private fun initButtonListeners(){
         // Boton Info MOD
         binding.btnInfoMod.setOnClickListener {
             dialogInfoMod()
         }
 
-        // Boton Añadir Botellas
+        // Boton de añadir mas bloques MOD
         binding.btnAddModBlock.setOnClickListener {
-            addModBloq()
+            addModBlock()
         }
 
         // Boton Calcular MOD
@@ -91,11 +95,11 @@ class ModFragment: Fragment() {
         }
     }
 
-    // Hace visible el primer layout invisible que encuentre de Scuba Tank
-    private fun addModBloq(){
+    // Hace visible el primer layout invisible que encuentre de MOD
+    private fun addModBlock(){
         // run lit@ -> break
         run lit@{
-            listScubaTanks.forEach {
+            listModLayouts.forEach {
                 if (it.visibility == View.GONE) {
                     it.visibility = View.VISIBLE
                     return@lit
@@ -105,7 +109,7 @@ class ModFragment: Fragment() {
     }
 
     // Devuelve el listado de layout de Scuba Tank
-    private fun getAllScubaTankLayouts(): List<LinearLayout>{
+    private fun getAllModLayouts(): List<LinearLayout>{
         return listOf(
             binding.linearLayoutMod1,
             binding.linearLayoutMod2,
@@ -151,9 +155,9 @@ class ModFragment: Fragment() {
 
     // Oculta todos los layout de bloques MOD, menos el primero
     private fun hideModCalcLayouts(){
-        listScubaTanks.forEach { it.visibility = View.GONE }
+        listModLayouts.forEach { it.visibility = View.GONE }
 
-        listScubaTanks[0].visibility = View.VISIBLE
+        listModLayouts[0].visibility = View.VISIBLE
     }
 
     // Calcula MOD de todos los bloques activos (visibles)
@@ -165,7 +169,7 @@ class ModFragment: Fragment() {
 
     // Calcula MOD
     private fun calcMod(layout: LinearLayout, map: Map<ModProperty, EditText>){
-       if(layout.visibility == View.VISIBLE && map[ModProperty.USER_O2]?.text.toString() != ""){
+       if(layout.visibility == View.VISIBLE && checkNotNullEditTextList(map)){
            val o2 = map[ModProperty.USER_O2]?.text.toString().toDouble()
 
            // Calculo opcional
@@ -173,8 +177,10 @@ class ModFragment: Fragment() {
                val ppo2 = map[ModProperty.USER_PO2]?.text.toString().toDouble()
                val userMod = String.format("%.0f", floor(((ppo2 / (o2 / 100)) - 1) * 10)) + " m"
                map[ModProperty.USER_MOD]?.setText(userMod)
+               map[ModProperty.USER_MOD]?.hint = getHintFromEnum(ModProperty.USER_MOD)
            }else{
                map[ModProperty.USER_MOD]?.setText("")
+               map[ModProperty.USER_MOD]?.hint = ""
            }
 
            // Calculos
@@ -186,6 +192,96 @@ class ModFragment: Fragment() {
            map[ModProperty.MOD12]?.setText(mod12)
            map[ModProperty.MOD14]?.setText(mod14)
            map[ModProperty.MOD16]?.setText(mod16)
+        }else{
+           map[ModProperty.USER_MOD]?.hint = getHintFromEnum(ModProperty.USER_MOD)
+           map[ModProperty.USER_MOD]?.setText("")
+           map[ModProperty.MOD12]?.setText("")
+           map[ModProperty.MOD14]?.setText("")
+           map[ModProperty.MOD16]?.setText("")
+       }
+    }
+
+    // Comprueba que los EditText de la lista no esten vacios
+    private fun checkNotNullEditTextList(map: Map<ModProperty, EditText>):Boolean{
+        var result = true
+
+        if(map[ModProperty.USER_O2]?.text.toString() == "") {
+            map[ModProperty.USER_O2]?.hint = resources.getString(R.string.required)
+            map[ModProperty.USER_O2]?.setHintTextColor(resources.getColor(R.color.red))
+            result = false
+        }
+
+        return result
+    }
+
+    // Inicializa Listeners que se ejecutan al cambiar el Focus de los EditText
+    // Añade/elimina las unidades de medicion de cada campo
+    private fun initEditTextListeners(){
+        mapEditText1.forEach { (t, u) ->
+            u.setOnFocusChangeListener { _, hasFocus ->
+                setStyleEditText(u, hasFocus, t)
+            }
+            u.hint = getHintFromEnum(t)
+        }
+
+        mapEditText2.forEach { (t, u) ->
+            u.setOnFocusChangeListener { _, hasFocus ->
+                setStyleEditText(u, hasFocus, t)
+            }
+            u.hint = getHintFromEnum(t)
+        }
+
+        mapEditText3.forEach { (t, u) ->
+            u.setOnFocusChangeListener { _, hasFocus ->
+                setStyleEditText(u, hasFocus, t)
+            }
+            u.hint = getHintFromEnum(t)
+        }
+    }
+
+    // Añade/elimina las unidades de medicion de cada campo, a parte añade la la pista de ayuda
+    private fun setStyleEditText(et: EditText, hasFocus: Boolean, enum: ModProperty){
+        val unit = getMeasurementUnitFromEnum(enum)
+        val hint = getHintFromEnum(enum)
+
+        if(hasFocus) {
+            if (et.text.isNotEmpty()) {
+                et.setText(
+                    et.text.toString().split(" ")[0]
+                )
+            } else {
+                et.hint = hint
+                et.setHintTextColor(resources.getColor(R.color.gray))
+            }
+        }else {
+            if(et.text.isNotEmpty()) {
+                val text = "${et.text} $unit"
+                et.setText(text)
+            }
+        }
+    }
+
+    // Devuelve una cadena con la unidad de medida segun el objeto Enum
+    private fun getMeasurementUnitFromEnum(unit: ModProperty): String{
+        return when(unit){
+            ModProperty.USER_O2 -> "%"
+            ModProperty.USER_PO2 -> "ppo2"
+            ModProperty.USER_MOD -> "m"
+            ModProperty.MOD12 -> "m"
+            ModProperty.MOD14 -> "m"
+            ModProperty.MOD16 -> "m"
+        }
+    }
+
+    // Devuelve una cadena con la ayuda segun el objeto Enum
+    private fun getHintFromEnum(unit: ModProperty): String{
+        return when(unit){
+            ModProperty.USER_O2 -> "32 %"
+            ModProperty.USER_PO2 -> "1.5 ppo2"
+            ModProperty.USER_MOD -> "36 m"
+            ModProperty.MOD12 -> "27 m"
+            ModProperty.MOD14 -> "33 m"
+            ModProperty.MOD16 -> "40 m"
         }
     }
 

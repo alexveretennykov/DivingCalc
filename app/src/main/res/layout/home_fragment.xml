@@ -85,12 +85,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_Ead"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:clickable="false"
             android:text="EAD" />
 
         <Button

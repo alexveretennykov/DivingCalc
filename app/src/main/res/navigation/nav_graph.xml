@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_modFragment"
             app:destination="@id/modFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_eadFragment"
+            app:destination="@id/eadFragment" />
     </fragment>
 
     <fragment
@@ -35,6 +38,15 @@
         tools:layout="@layout/mod_fragment">
         <action
             android:id="@+id/action_modFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eadFragment"
+        android:name="com.example.divecalculator.fragment.EadFragment"
+        android:label="EadFragment"
+        tools:layout="@layout/ead_fragment" >
+        <action
+            android:id="@+id/action_eadFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
