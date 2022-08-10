@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.divecalculator.R
 import com.example.divecalculator.databinding.EadFragmentBinding
@@ -45,7 +44,7 @@ class EadFragment: Fragment() {
         // Oculta todos los layouts, menos el primero
         hideEadCalcLayouts()
 
-        // Inicializa los listeners de Botones 'Eliminar Botella'
+        // Inicializa los listeners de Botones 'Eliminar Bloque EAD'
         initButtonListeners()
 
         // Inicializa los listeners de Edit Text
@@ -68,7 +67,7 @@ class EadFragment: Fragment() {
 
         // Boton Calcular EAD
         binding.btnCalcEad.setOnClickListener {
-            calcAllMod()
+            calcAllEad()
         }
 
         // Listeners de la imagen 'Delete' para ocultar los bloques de EAD
@@ -107,7 +106,7 @@ class EadFragment: Fragment() {
         }
     }
 
-    // Devuelve el listado de layout de Scuba Tank
+    // Devuelve el listado de layout de EAD
     private fun getAllEadLayouts(): List<LinearLayout>{
         return listOf(
             binding.linearLayoutEad1,
@@ -143,7 +142,7 @@ class EadFragment: Fragment() {
         )
     }
 
-    // Oculta todos los layout de bloques MOD, menos el primero
+    // Oculta todos los layout de bloques EAD, menos el primero
     private fun hideEadCalcLayouts(){
         listEadLayouts.forEach { it.visibility = View.GONE }
 
@@ -151,7 +150,7 @@ class EadFragment: Fragment() {
     }
 
     // Calcula EAD de todos los bloques activos (visibles)
-    private fun calcAllMod(){
+    private fun calcAllEad(){
         calcMod(binding.linearLayoutEad1, mapEditText1)
         calcMod(binding.linearLayoutEad2, mapEditText2)
         calcMod(binding.linearLayoutEad3, mapEditText3)

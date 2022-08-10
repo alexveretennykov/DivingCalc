@@ -19,34 +19,30 @@
         <action
             android:id="@+id/action_homeFragment_to_eadFragment"
             app:destination="@id/eadFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_endFragment"
+            app:destination="@id/endFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/sacFragment"
         android:name="com.example.divecalculator.fragment.SacFragment"
         android:label="SacFragment"
-        tools:layout="@layout/sac_fragment">
-        <action
-            android:id="@+id/action_sacFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/sac_fragment"/>
 
     <fragment
         android:id="@+id/modFragment"
         android:name="com.example.divecalculator.fragment.ModFragment"
         android:label="SacFragment"
-        tools:layout="@layout/mod_fragment">
-        <action
-            android:id="@+id/action_modFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/mod_fragment"/>
     <fragment
         android:id="@+id/eadFragment"
         android:name="com.example.divecalculator.fragment.EadFragment"
         android:label="EadFragment"
-        tools:layout="@layout/ead_fragment" >
-        <action
-            android:id="@+id/action_eadFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/ead_fragment" />
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.example.divecalculator.fragment.EndFragment"
+        android:label="EndFragment"
+        tools:layout="@layout/end_fragment"/>
 </navigation>

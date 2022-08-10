@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Dive Calculator</string>
-    <string name="sac_long">Surface Air Consumption</string>
     <string name="calculators">Calculators</string>
     <string name="infoSacHtml">
         <![CDATA[
@@ -88,20 +87,46 @@
             narcotic effects using trimix, use END calculator (Equivalent narcotic depth).
         ]]>
     </string>
+    <string name="infoEndHtml">
+        <![CDATA[
+            The <b>Equivalent narcotic depth</b> is used in technical diving as a way of estimating
+            the narcotic effect of a breathing gas mixture, such as heliox and trimix.
+
+            <ul>The method is, for a given mix and depth, to calculate the depth which would produce
+            the same narcotic effect as when breathing air. It is <b>recommended not to exceed
+            END of 30m</b>.
+
+            <ul><b>Narcosis symptoms:</b>
+            <br>- Marked impairment of intellectual capacity
+            <br>- Degradation of neuromuscular performance
+            <br>- Impaired ability to make sound decisions
+            <br>- Impaired consciousness (short-term memory loss,
+            visual impairment)
+            <br>- Increased sensitivity to stress
+        ]]>
+    </string>
     <string name="what_is_sac">What is SAC?</string>
     <string name="what_is_mod">What is MOD?</string>
     <string name="what_is_ead">What is EAD?</string>
+    <string name="what_is_end">What is END?</string>
     <string name="meaning_of_acronyms">Meaning of Acronyms</string>
-    <string name="info_whats_is_sac">Info - Whats is SAC?</string>
-    <string name="info_whats_is_ead">Info - Whats is EAD?</string>
-    <string name="info_whats_is_mod">Info - Whats is MOD?</string>
     <string name="info_meaning_of_acronyms">Info - Meaning of acronyms</string>
+    <string name="info_whats_is_sac">Info - Whats is SAC?</string>
+    <string name="info_whats_is_mod">Info - Whats is MOD?</string>
+    <string name="info_whats_is_ead">Info - Whats is EAD?</string>
+    <string name="info_whats_is_end">Info - Whats is END?</string>
     <string name="scuba_tank_1">Scuba Tank 1</string>
     <string name="scuba_tank_2">Scuba Tank 2</string>
     <string name="scuba_tank_3">Scuba Tank 3</string>
     <string name="mod_1">MOD 1</string>
     <string name="mod_2">MOD 2</string>
     <string name="mod_3">MOD 3</string>
+    <string name="ead_1">EAD 1</string>
+    <string name="ead_2">EAD 2</string>
+    <string name="ead_3">EAD 3</string>
+    <string name="end_1">END 1</string>
+    <string name="end_2">END 2</string>
+    <string name="end_3">END 3</string>
     <string name="delete_tank_1">Delete Tank 1</string>
     <string name="delete_tank_2">Delete Tank 2</string>
     <string name="delete_tank_3">Delete Tank 3</string>
@@ -111,6 +136,13 @@
     <string name="delete_ead_1">Delete EAD Block 1</string>
     <string name="delete_ead_2">Delete EAD Block 2</string>
     <string name="delete_ead_3">Delete EAD Block 3</string>
+    <string name="delete_end_1">Delete END Block 1</string>
+    <string name="delete_end_2">Delete END Block 2</string>
+    <string name="delete_end_3">Delete END Block 3</string>
+    <string name="sac_long">Surface Air Consumption</string>
+    <string name="mod_long">Maximum Operating Depth</string>
+    <string name="ead_long">Equivalent Air Depth</string>
+    <string name="end_long">Equivalent Narcotic Depth</string>
     <string name="tank_volume">Tank Volume</string>
     <string name="initial_pressure">Initial Pressure</string>
     <string name="final_pressure">Final Pressure</string>
@@ -122,10 +154,10 @@
     <string name="add_tank">Add Tank</string>
     <string name="add_mod_block">Add MOD Block</string>
     <string name="add_ead_block">Add EAD Block</string>
+    <string name="add_end_block">Add END Block</string>
     <string name="calculate">Calculate</string>
     <string name="hint_total_sac">0.00 l/min</string>
     <string name="required">required</string>
-    <string name="mod_long">Maximum Operating Depth</string>
     <string name="oxygen_percent">Oxygen Percentage</string>
     <string name="ppo2_interest">PPO2 of Interest</string>
     <string name="mod_12">MOD – 1.2 ppo2</string>
@@ -138,7 +170,7 @@
     <string name="operating_limit_tech_dive">Operating limit (tech dive)</string>
     <string name="operating_limit_recreational_dive">Operating limit (recreational dive)</string>
     <string name="operating_limit_decompresion">Operating limit (decompresion)</string>
-    <string name="equivalent_air_depth">Equivalent Air Depth</string>
     <string name="depth">Depth</string>
     <string name="sac">SAC</string>
+    <string name="helium_percent">Helium Percentage</string>
 </resources>

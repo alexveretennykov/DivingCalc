@@ -9,7 +9,7 @@
 
     <!-- Menu Superior -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/headerEadFragment"
+        android:id="@+id/headerEndFragment"
         android:layout_width="match_parent"
         android:background="@color/primary"
         android:layout_height="50dp">
@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ead_long"
+            android:text="@string/end_long"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/btn_infoEad"
+            android:id="@+id/btn_infoEnd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -36,8 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/info_whats_is_ead" />
-
+            android:contentDescription="@string/info_whats_is_end" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -49,9 +48,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- EAD 1 -->
+            <!-- END 1 -->
             <LinearLayout
-                android:id="@+id/linearLayout_ead1"
+                android:id="@+id/linearLayout_end1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -66,7 +65,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/ead_1"
+                        android:text="@string/end_1"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -77,7 +76,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteEad1"
+                        android:id="@+id/btn_deleteEnd1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -85,7 +84,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_ead_1" />
+                        android:contentDescription="@string/delete_end_1" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -101,10 +100,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/oxygen_percent" />
+                        android:text="@string/helium_percent" />
 
                     <EditText
-                        android:id="@+id/et_OxygenPercentage_1"
+                        android:id="@+id/et_HeliumPercentage_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -155,10 +154,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/ead_long" />
+                        android:text="@string/end_long" />
 
                     <EditText
-                        android:id="@+id/et_EadCalculated1"
+                        android:id="@+id/et_EndCalculated1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -167,9 +166,9 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- EAD 2 -->
+            <!-- END 2 -->
             <LinearLayout
-                android:id="@+id/linearLayout_ead2"
+                android:id="@+id/linearLayout_end2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -184,7 +183,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/ead_2"
+                        android:text="@string/end_2"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -196,7 +195,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteEad2"
+                        android:id="@+id/btn_deleteEnd2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -204,7 +203,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_ead_2" />
+                        android:contentDescription="@string/delete_end_2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -219,10 +218,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/oxygen_percent" />
+                        android:text="@string/helium_percent" />
 
                     <EditText
-                        android:id="@+id/et_OxygenPercentage_2"
+                        android:id="@+id/et_HeliumPercentage_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -273,10 +272,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/ead_long" />
+                        android:text="@string/end_long" />
 
                     <EditText
-                        android:id="@+id/et_EadCalculated2"
+                        android:id="@+id/et_EndCalculated2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -285,9 +284,9 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- EAD 3 -->
+            <!-- END 3 -->
             <LinearLayout
-                android:id="@+id/linearLayout_ead3"
+                android:id="@+id/linearLayout_end3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -302,7 +301,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/ead_3"
+                        android:text="@string/end_3"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -313,7 +312,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteEad3"
+                        android:id="@+id/btn_deleteEnd3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -321,7 +320,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_ead_3" />
+                        android:contentDescription="@string/delete_end_3" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -335,11 +334,11 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/oxygen_percent" />
+                        android:text="@string/helium_percent"
+                        android:textColor="@color/text_color" />
 
                     <EditText
-                        android:id="@+id/et_OxygenPercentage_3"
+                        android:id="@+id/et_HeliumPercentage_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -390,10 +389,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/ead_long" />
+                        android:text="@string/end_long" />
 
                     <EditText
-                        android:id="@+id/et_EadCalculated3"
+                        android:id="@+id/et_EndCalculated3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -405,7 +404,7 @@
             <!-- Bloque Anuncios Admob -->
             <com.google.android.gms.ads.AdView
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/eadAdmobBanner"
+                android:id="@+id/endAdmobBanner"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -423,14 +422,14 @@
                 android:orientation="horizontal" >
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_addEadBlock"
+                    android:id="@+id/btn_addEndBlock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/add_ead_block" />
+                    android:text="@string/add_end_block" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_calcEad"
+                    android:id="@+id/btn_calcEnd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
