@@ -50,6 +50,9 @@ class SacFragment: Fragment() {
         // Inicializa los listeners de Edit Text
         initEditTextListeners()
 
+        // Añade Hint al SAC Total
+        binding.tvTotalSac.text = getSacString(0.00)
+
         return binding.root
     }
 

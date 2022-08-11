@@ -65,6 +65,10 @@ class HomeFragment: Fragment() {
             navigateToCalculator(R.id.action_homeFragment_to_endFragment)
         }
 
+        binding.btnTod.setOnClickListener {
+            navigateToCalculator(R.id.action_homeFragment_to_todFragment)
+        }
+
         return binding.root
     }
 

@@ -151,13 +151,13 @@ class EndFragment: Fragment() {
 
     // Calcula END de todos los bloques activos (visibles)
     private fun calcAllEnd(){
-        calcMod(binding.linearLayoutEnd1, mapEditText1)
-        calcMod(binding.linearLayoutEnd2, mapEditText2)
-        calcMod(binding.linearLayoutEnd3, mapEditText3)
+        calcEnd(binding.linearLayoutEnd1, mapEditText1)
+        calcEnd(binding.linearLayoutEnd2, mapEditText2)
+        calcEnd(binding.linearLayoutEnd3, mapEditText3)
     }
 
     // Calcula END
-    private fun calcMod(layout: LinearLayout, map: Map<EndProperty, EditText>){
+    private fun calcEnd(layout: LinearLayout, map: Map<EndProperty, EditText>){
        if(layout.visibility == View.VISIBLE  && checkNotNullEditTextList(map)){
            val he = map[EndProperty.USER_HELIUM]?.text.toString().split(" ")[0].toInt()
            val depth = map[EndProperty.USER_DEPTH]?.text.toString().split(" ")[0].toInt()
@@ -167,7 +167,7 @@ class EndFragment: Fragment() {
            val end = String.format("%.0f", (depth + 10) * ((100-he)/100.0) - 10) + " m"
 
            // Muestra los resultados
-           map[EndProperty.END]?.setText(end.toString())
+           map[EndProperty.END]?.setText(end)
         }
     }
 

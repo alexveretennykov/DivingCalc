@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Dive Calculator</string>
     <string name="calculators">Calculators</string>
+    <string name="infoCalculatorsHtml">
+        <![CDATA[
+        <ul><b>MOD</b> - Maximum Operating Depth
+        <ul><b>SAC</b> - Surface Air Consumption
+        <ul><b>EAD</b> - Equivalent Air Depth
+        <ul><b>END</b> - Equivalent Narcotic Depth
+        <ul><b>NDL</b> - No Decompression Limit
+        <ul><b>TOD</b> - Theoretical Ocean Depth
+        <ul>You will find more information inside each of the calculators.
+        ]]>
+    </string>
     <string name="infoSacHtml">
         <![CDATA[
         The <b>Surface Air Consumption</b> is an expression of your air consumption
@@ -32,17 +43,6 @@
         <br>Dive more to get more experience, better buoyancy, reduce stress and exertion. Stay in
         good physical shape, which improves oxygen consumption and improves breathing. Wear a suitable
         suit, so as not to get cold throughout the dive.
-        ]]>
-    </string>
-    <string name="infoCalculatorsHtml">
-        <![CDATA[
-        <ul><b>MOD</b> - Maximum Operating Depth
-        <ul><b>SAC</b> - Surface Air Consumption
-        <ul><b>EAD</b> - Equivalent Air Depth
-        <ul><b>END</b> - Equivalent Narcotic Depth
-        <ul><b>NDL</b> - No Decompression Limit
-        <ul><b>TOD</b> - Theoretical Ocean Depth
-        <ul>You will find more information inside each of the calculators.
         ]]>
     </string>
     <string name="infoModHtml">
@@ -89,7 +89,7 @@
     </string>
     <string name="infoEndHtml">
         <![CDATA[
-            The <b>Equivalent narcotic depth</b> is used in technical diving as a way of estimating
+            The <b>Equivalent Narcotic Depth</b> is used in technical diving as a way of estimating
             the narcotic effect of a breathing gas mixture, such as heliox and trimix.
 
             <ul>The method is, for a given mix and depth, to calculate the depth which would produce
@@ -105,16 +105,23 @@
             <br>- Increased sensitivity to stress
         ]]>
     </string>
+    <string name="infoTodHtml">
+        <![CDATA[
+            The <b>Theoretical Ocean Depth</b> is
+        ]]>
+    </string>
     <string name="what_is_sac">What is SAC?</string>
     <string name="what_is_mod">What is MOD?</string>
     <string name="what_is_ead">What is EAD?</string>
     <string name="what_is_end">What is END?</string>
+    <string name="what_is_tod">What is TOD?</string>
     <string name="meaning_of_acronyms">Meaning of Acronyms</string>
     <string name="info_meaning_of_acronyms">Info - Meaning of acronyms</string>
     <string name="info_whats_is_sac">Info - Whats is SAC?</string>
     <string name="info_whats_is_mod">Info - Whats is MOD?</string>
     <string name="info_whats_is_ead">Info - Whats is EAD?</string>
     <string name="info_whats_is_end">Info - Whats is END?</string>
+    <string name="info_whats_is_tod">Info - Whats is TOD?</string>
     <string name="scuba_tank_1">Scuba Tank 1</string>
     <string name="scuba_tank_2">Scuba Tank 2</string>
     <string name="scuba_tank_3">Scuba Tank 3</string>
@@ -127,6 +134,9 @@
     <string name="end_1">END 1</string>
     <string name="end_2">END 2</string>
     <string name="end_3">END 3</string>
+    <string name="tod_1">TOD 1</string>
+    <string name="tod_2">TOD 2</string>
+    <string name="tod_3">TOD 3</string>
     <string name="delete_tank_1">Delete Tank 1</string>
     <string name="delete_tank_2">Delete Tank 2</string>
     <string name="delete_tank_3">Delete Tank 3</string>
@@ -139,10 +149,18 @@
     <string name="delete_end_1">Delete END Block 1</string>
     <string name="delete_end_2">Delete END Block 2</string>
     <string name="delete_end_3">Delete END Block 3</string>
+    <string name="delete_tod_1">Delete TOD Block 1</string>
+    <string name="delete_tod_2">Delete TOD Block 2</string>
+    <string name="delete_tod_3">Delete TOD Block 3</string>
     <string name="sac_long">Surface Air Consumption</string>
     <string name="mod_long">Maximum Operating Depth</string>
     <string name="ead_long">Equivalent Air Depth</string>
     <string name="end_long">Equivalent Narcotic Depth</string>
+    <string name="tod_long">Theoretical Ocean Depth</string>
+    <string name="add_mod_block">Add MOD Block</string>
+    <string name="add_ead_block">Add EAD Block</string>
+    <string name="add_end_block">Add END Block</string>
+    <string name="add_tod_block">Add TOD Block</string>
     <string name="tank_volume">Tank Volume</string>
     <string name="initial_pressure">Initial Pressure</string>
     <string name="final_pressure">Final Pressure</string>
@@ -152,11 +170,7 @@
     <string name="view_history">View History</string>
     <string name="save_sac_in_history">Save SAC in History</string>
     <string name="add_tank">Add Tank</string>
-    <string name="add_mod_block">Add MOD Block</string>
-    <string name="add_ead_block">Add EAD Block</string>
-    <string name="add_end_block">Add END Block</string>
     <string name="calculate">Calculate</string>
-    <string name="hint_total_sac">0.00 l/min</string>
     <string name="required">required</string>
     <string name="oxygen_percent">Oxygen Percentage</string>
     <string name="ppo2_interest">PPO2 of Interest</string>
@@ -169,8 +183,14 @@
     <string name="for_custom_po2">For custom PO2</string>
     <string name="operating_limit_tech_dive">Operating limit (tech dive)</string>
     <string name="operating_limit_recreational_dive">Operating limit (recreational dive)</string>
-    <string name="operating_limit_decompresion">Operating limit (decompresion)</string>
+    <string name="operating_limit_decompression">Operating limit (decompression)</string>
     <string name="depth">Depth</string>
     <string name="sac">SAC</string>
     <string name="helium_percent">Helium Percentage</string>
+    <string name="altitude">Altitude</string>
+    <string name="safety_stop">Safety Stop</string>
+    <string name="safety_stop_sea">The safety stop at sea level</string>
+    <string name="safety_stop_altitude">The safety stop at altitude</string>
+    <string name="salt_water">Salt Water</string>
+    <string name="activate_salt_water">Activate when the water is salty</string>
 </resources>

@@ -151,13 +151,13 @@ class EadFragment: Fragment() {
 
     // Calcula EAD de todos los bloques activos (visibles)
     private fun calcAllEad(){
-        calcMod(binding.linearLayoutEad1, mapEditText1)
-        calcMod(binding.linearLayoutEad2, mapEditText2)
-        calcMod(binding.linearLayoutEad3, mapEditText3)
+        calcEad(binding.linearLayoutEad1, mapEditText1)
+        calcEad(binding.linearLayoutEad2, mapEditText2)
+        calcEad(binding.linearLayoutEad3, mapEditText3)
     }
 
     // Calcula EAD
-    private fun calcMod(layout: LinearLayout, map: Map<EadProperty, EditText>){
+    private fun calcEad(layout: LinearLayout, map: Map<EadProperty, EditText>){
        if(layout.visibility == View.VISIBLE  && checkNotNullEditTextList(map)){
            val o2 = map[EadProperty.USER_O2]?.text.toString().split(" ")[0].toInt()
            val depth = map[EadProperty.USER_DEPTH]?.text.toString().split(" ")[0].toInt()
@@ -167,7 +167,7 @@ class EadFragment: Fragment() {
            val ead = String.format("%.0f", (depth + 10) * ((100-o2)/100.0) / 0.79 - 10) + " m"
 
            // Muestra los resultados
-           map[EadProperty.EAD]?.setText(ead.toString())
+           map[EadProperty.EAD]?.setText(ead)
         }
     }
 

@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeFragment_to_endFragment"
             app:destination="@id/endFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_todFragment"
+            app:destination="@id/todFragment" />
     </fragment>
 
     <fragment
@@ -45,4 +48,9 @@
         android:name="com.example.divecalculator.fragment.EndFragment"
         android:label="EndFragment"
         tools:layout="@layout/end_fragment"/>
+    <fragment
+        android:id="@+id/todFragment"
+        android:name="com.example.divecalculator.fragment.TodFragment"
+        android:label="TodFragment"
+        tools:layout="@layout/tod_fragment"/>
 </navigation>
