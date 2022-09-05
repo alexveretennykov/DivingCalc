@@ -177,13 +177,13 @@ class EndFragment: Fragment() {
 
         if(map[EndProperty.USER_HELIUM]?.text.toString() == "") {
             map[EndProperty.USER_HELIUM]?.hint = resources.getString(R.string.required)
-            map[EndProperty.USER_HELIUM]?.setHintTextColor(resources.getColor(R.color.red))
+            map[EndProperty.USER_HELIUM]?.setHintTextColor(resources.getColor(R.color.orange_red))
             result = false
         }
 
         if(map[EndProperty.USER_DEPTH]?.text.toString() == ""){
             map[EndProperty.USER_DEPTH]?.hint = resources.getString(R.string.required)
-            map[EndProperty.USER_DEPTH]?.setHintTextColor(resources.getColor(R.color.red))
+            map[EndProperty.USER_DEPTH]?.setHintTextColor(resources.getColor(R.color.orange_red))
             result = false
         }
 

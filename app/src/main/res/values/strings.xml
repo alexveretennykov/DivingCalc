@@ -6,6 +6,7 @@
         <ul><b>MOD</b> - Maximum Operating Depth
         <ul><b>SAC</b> - Surface Air Consumption
         <ul><b>EAD</b> - Equivalent Air Depth
+        <ul><b>EADD</b> - Equivalent Air Density Depth
         <ul><b>END</b> - Equivalent Narcotic Depth
         <ul><b>NDL</b> - No Decompression Limit
         <ul><b>TOD</b> - Theoretical Ocean Depth
@@ -107,7 +108,41 @@
     </string>
     <string name="infoTodHtml">
         <![CDATA[
-            The <b>Theoretical Ocean Depth</b> is
+            <b>Theoretical Ocean Depth</b> is used to convert your dives at altitude to equivalent
+            dives in the ocean. Altitude diving is considered when it exceeds 300m above sea level.
+
+            <ul>Once you find your Theoretical Ocean Depth (TOD), you can use your regular
+            Recreational Dive Planner (RDP) to correctly plan your altitude dives.
+
+            <ul>It is also important to refer to your computer/depth gauge manual to adjust them
+            for altitude dives so that they display the correct depth.
+
+            <ul>If you want to achieve even more accurate results, you have to take into account
+            the density of water you are planning to dive in. The density of freshwater
+            (1 kg per liter), for instance, is lower than that of seawater (1.027 kg per liter),
+            whereas the water density in some saltwater lakes can be higher, and the higher the
+            density, the shallower you will experience each additional atmosphere of pressure.
+        ]]>
+    </string>
+    <string name="infoBestMixHtml">
+        <![CDATA[
+
+        ]]>
+    </string>
+    <string name="infoGasDensityHtml">
+        <![CDATA[
+            The increased density of the inhaled gas <b>increases</b> the diver`s <b>respiratory
+            effort</b> and causes <b>accumulation of CO2</b> in the blood. CO2 is a gas with a
+            narcotic potential 20 times greater than nitrogen and also increases the risk of Hypercapnea.
+
+            <ul><b>What is the safe limit?</b>
+            <br>It depends on the people, but in general terms it is considered as a maximum desirable
+            density of up to 5.2 g/L and an absolute maximum of 6.2 g/L.
+
+            <ul><b>How to reduce gas density?</b>
+            <br>Helium can be added to the breathing gas mixture, it has a density 7 times less
+            than nitrogen and 8 times less than oxygen. The second option is to reduce the maximum
+            depth of the dive.
         ]]>
     </string>
     <string name="what_is_sac">What is SAC?</string>
@@ -115,6 +150,8 @@
     <string name="what_is_ead">What is EAD?</string>
     <string name="what_is_end">What is END?</string>
     <string name="what_is_tod">What is TOD?</string>
+    <string name="what_is_best_mix">Info - Best Mix</string>
+    <string name="whats_is_gas_density">Info - Gas Density</string>
     <string name="meaning_of_acronyms">Meaning of Acronyms</string>
     <string name="info_meaning_of_acronyms">Info - Meaning of acronyms</string>
     <string name="info_whats_is_sac">Info - Whats is SAC?</string>
@@ -122,6 +159,8 @@
     <string name="info_whats_is_ead">Info - Whats is EAD?</string>
     <string name="info_whats_is_end">Info - Whats is END?</string>
     <string name="info_whats_is_tod">Info - Whats is TOD?</string>
+    <string name="info_whats_is_gas_density">Info - What is the density of gas?</string>
+    <string name="info_whats_is_best_mix">Info - Whats is the optimal gas mix?</string>
     <string name="scuba_tank_1">Scuba Tank 1</string>
     <string name="scuba_tank_2">Scuba Tank 2</string>
     <string name="scuba_tank_3">Scuba Tank 3</string>
@@ -137,6 +176,12 @@
     <string name="tod_1">TOD 1</string>
     <string name="tod_2">TOD 2</string>
     <string name="tod_3">TOD 3</string>
+    <string name="gas_density_1">Gas Density 1</string>
+    <string name="gas_density_2">Gas Density 2</string>
+    <string name="gas_density_3">Gas Density 3</string>
+    <string name="best_mix_1">Optimal Gas Mix 1</string>
+    <string name="best_mix_2">Optimal Gas Mix 2</string>
+    <string name="best_mix_3">Optimal Gas Mix 3</string>
     <string name="delete_tank_1">Delete Tank 1</string>
     <string name="delete_tank_2">Delete Tank 2</string>
     <string name="delete_tank_3">Delete Tank 3</string>
@@ -152,15 +197,18 @@
     <string name="delete_tod_1">Delete TOD Block 1</string>
     <string name="delete_tod_2">Delete TOD Block 2</string>
     <string name="delete_tod_3">Delete TOD Block 3</string>
+    <string name="delete_gas_density_1">Delete Gas Density Block 1</string>
+    <string name="delete_gas_density_2">Delete Gas Density Block 2</string>
+    <string name="delete_gas_density_3">Delete Gas Density Block 3</string>
+    <string name="delete_best_mix_1">Delete Optimal Gas Mix Block 1</string>
+    <string name="delete_best_mix_2">Delete Optimal Gas Mix Block 2</string>
+    <string name="delete_best_mix_3">Delete Optimal Gas Mix Block 3</string>
     <string name="sac_long">Surface Air Consumption</string>
     <string name="mod_long">Maximum Operating Depth</string>
     <string name="ead_long">Equivalent Air Depth</string>
     <string name="end_long">Equivalent Narcotic Depth</string>
     <string name="tod_long">Theoretical Ocean Depth</string>
-    <string name="add_mod_block">Add MOD Block</string>
-    <string name="add_ead_block">Add EAD Block</string>
-    <string name="add_end_block">Add END Block</string>
-    <string name="add_tod_block">Add TOD Block</string>
+    <string name="add_block">Add Block</string>
     <string name="tank_volume">Tank Volume</string>
     <string name="initial_pressure">Initial Pressure</string>
     <string name="final_pressure">Final Pressure</string>
@@ -169,7 +217,6 @@
     <string name="total_sac">Total SAC</string>
     <string name="view_history">View History</string>
     <string name="save_sac_in_history">Save SAC in History</string>
-    <string name="add_tank">Add Tank</string>
     <string name="calculate">Calculate</string>
     <string name="required">required</string>
     <string name="oxygen_percent">Oxygen Percentage</string>
@@ -178,6 +225,9 @@
     <string name="mod_14">MOD – 1.4 ppo2</string>
     <string name="mod_16">MOD – 1.6 ppo2</string>
     <string name="mod_user">MOD - Calculated</string>
+    <string name="mix_12">Best Mix – 1.2 ppo2</string>
+    <string name="mix_14">Best Mix – 1.4 ppo2</string>
+    <string name="mix_16">Best Mix – 1.6 ppo2</string>
     <string name="oxygen_gas_mixture">% of oxygen in the gas mixture</string>
     <string name="custom_po2">Custom PO2</string>
     <string name="for_custom_po2">For custom PO2</string>
@@ -193,4 +243,11 @@
     <string name="safety_stop_altitude">The safety stop at altitude</string>
     <string name="salt_water">Salt Water</string>
     <string name="activate_salt_water">Activate when the water is salty</string>
+    <string name="activate_trimix">Activate if you want to use trimix</string>
+    <string name="optimal_mix">Optimal Gas Mix</string>
+    <string name="trimix">Trimix</string>
+    <string name="recommended_mix">Recommended Mix</string>
+    <string name="standard_mix">Standard gas mix</string>
+    <string name="gas_density">Gas Density</string>
+    <string name="ppo2">PPO2</string>
 </resources>

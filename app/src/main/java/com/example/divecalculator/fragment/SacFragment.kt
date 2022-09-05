@@ -305,7 +305,7 @@ class SacFragment: Fragment() {
         map.forEach {
             if(it.value.text.isEmpty()){
                 it.value.hint = resources.getString(R.string.required)
-                it.value.setHintTextColor(resources.getColor(R.color.red))
+                it.value.setHintTextColor(resources.getColor(R.color.orange_red))
                 result = false
             }
         }

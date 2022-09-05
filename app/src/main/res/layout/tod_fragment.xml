@@ -179,6 +179,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="13dp"
                     android:background="@color/primary_light"
@@ -651,7 +652,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/add_tod_block" />
+                    android:text="@string/add_block" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_calcTod"

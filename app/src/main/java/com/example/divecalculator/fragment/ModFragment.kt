@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.divecalculator.R
 import com.example.divecalculator.databinding.ModFragmentBinding
@@ -207,7 +206,7 @@ class ModFragment: Fragment() {
 
         if(map[ModProperty.USER_O2]?.text.toString() == "") {
             map[ModProperty.USER_O2]?.hint = resources.getString(R.string.required)
-            map[ModProperty.USER_O2]?.setHintTextColor(resources.getColor(R.color.red))
+            map[ModProperty.USER_O2]?.setHintTextColor(resources.getColor(R.color.orange_red))
             result = false
         }
 

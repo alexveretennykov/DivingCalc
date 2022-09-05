@@ -9,7 +9,7 @@
 
     <!-- Menu Superior -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/headerModFragment"
+        android:id="@+id/headerBestMixFragment"
         android:layout_width="match_parent"
         android:background="@color/primary"
         android:layout_height="50dp">
@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mod_long"
+            android:text="@string/optimal_mix"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/btn_infoMod"
+            android:id="@+id/btn_infoBestMix"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -36,8 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/info_whats_is_mod" />
-
+            android:contentDescription="@string/info_whats_is_best_mix" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -49,9 +48,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- MOD 1 -->
+            <!-- Mix 1 -->
             <LinearLayout
-                android:id="@+id/linearLayout_mod1"
+                android:id="@+id/linearLayout_bestMix1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -66,7 +65,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/mod_1"
+                        android:text="@string/best_mix_1"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -77,7 +76,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteMod1"
+                        android:id="@+id/btn_deleteBestMix1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -85,8 +84,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_mod_1" />
-
+                        android:contentDescription="@string/delete_best_mix_1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -101,86 +99,36 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/oxygen_percent" />
+                        android:text="@string/depth" />
 
                     <EditText
-                        android:id="@+id/et_OxygenPercentage_1"
+                        android:id="@+id/et_Depth1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:inputType="number" />
                 </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="-15dp"
-                    android:textSize="11sp"
-                    android:text="@string/oxygen_gas_mixture" />
 
-                <LinearLayout
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/btn_Trimix1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/ppo2_interest" />
-
-                    <EditText
-                        android:id="@+id/et_UserPpo_1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
-                </LinearLayout>
+                    android:checked="false"
+                    android:text="@string/trimix"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="-15dp"
                     android:textSize="11sp"
-                    android:text="@string/custom_po2" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/mod_user" />
-
-                    <EditText
-                        android:id="@+id/et_Result_Mod_1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:enabled="false"
-                        android:textColor="@color/text_color" />
-                </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="-15dp"
-                    android:textSize="11sp"
-                    android:text="@string/for_custom_po2" />
+                    android:text="@string/activate_trimix" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="13dp"
                     android:background="@color/primary_light"
@@ -198,13 +146,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_12" />
+                        android:text="@string/mix_12" />
 
                     <EditText
                         android:id="@+id/et_Ppo_12_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -228,13 +176,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_14" />
+                        android:text="@string/mix_14" />
 
                     <EditText
                         android:id="@+id/et_Ppo_14_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -258,13 +206,43 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_16" />
+                        android:text="@string/mix_16" />
 
                     <EditText
                         android:id="@+id/et_Ppo_16_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_decompression" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/recommended_mix" />
+
+                    <EditText
+                        android:id="@+id/et_recommended_mix1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -275,12 +253,13 @@
                     android:layout_marginTop="-15dp"
                     android:layout_marginBottom="10dp"
                     android:textSize="11sp"
-                    android:text="@string/operating_limit_decompression" />
+                    android:text="@string/standard_mix" />
+
             </LinearLayout>
 
-            <!-- MOD 2 -->
+            <!-- Mix 2 -->
             <LinearLayout
-                android:id="@+id/linearLayout_mod2"
+                android:id="@+id/linearLayout_bestMix2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -295,19 +274,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/mod_2"
+                        android:text="@string/best_mix_2"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.501"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteMod2"
+                        android:id="@+id/btn_deleteBestMix2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -315,7 +293,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_mod_2" />
+                        android:contentDescription="@string/delete_best_mix_1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -330,86 +308,36 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/oxygen_percent" />
+                        android:text="@string/depth" />
 
                     <EditText
-                        android:id="@+id/et_OxygenPercentage_2"
+                        android:id="@+id/et_Depth2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:inputType="number" />
                 </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="-15dp"
-                    android:textSize="11sp"
-                    android:text="@string/oxygen_gas_mixture" />
 
-                <LinearLayout
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/btn_Trimix2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/ppo2_interest" />
-
-                    <EditText
-                        android:id="@+id/et_UserPpo_2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
-                </LinearLayout>
+                    android:checked="false"
+                    android:text="@string/trimix"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="-15dp"
                     android:textSize="11sp"
-                    android:text="@string/custom_po2" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/mod_user" />
-
-                    <EditText
-                        android:id="@+id/et_Result_Mod_2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:enabled="false"
-                        android:textColor="@color/text_color" />
-                </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="-15dp"
-                    android:textSize="11sp"
-                    android:text="@string/for_custom_po2" />
+                    android:text="@string/activate_trimix" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="13dp"
                     android:background="@color/primary_light"
@@ -427,13 +355,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_12" />
+                        android:text="@string/mix_12" />
 
                     <EditText
                         android:id="@+id/et_Ppo_12_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -457,13 +385,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_14" />
+                        android:text="@string/mix_14" />
 
                     <EditText
                         android:id="@+id/et_Ppo_14_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -487,13 +415,43 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_16" />
+                        android:text="@string/mix_16" />
 
                     <EditText
                         android:id="@+id/et_Ppo_16_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_decompression" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/recommended_mix" />
+
+                    <EditText
+                        android:id="@+id/et_recommended_mix2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -504,12 +462,13 @@
                     android:layout_marginTop="-15dp"
                     android:layout_marginBottom="10dp"
                     android:textSize="11sp"
-                    android:text="@string/operating_limit_decompression" />
+                    android:text="@string/standard_mix" />
+
             </LinearLayout>
 
-            <!-- MOD 3 -->
+            <!-- Mix 3 -->
             <LinearLayout
-                android:id="@+id/linearLayout_mod3"
+                android:id="@+id/linearLayout_bestMix3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -524,7 +483,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/mod_3"
+                        android:text="@string/best_mix_3"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -535,15 +494,15 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteMod3"
+                        android:id="@+id/btn_deleteBestMix3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:contentDescription="@string/delete_mod_3"
                         android:src="@drawable/ic_remove"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:visibility="visible" />
+                        tools:visibility="visible"
+                        android:contentDescription="@string/delete_best_mix_1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -558,86 +517,36 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/oxygen_percent" />
+                        android:text="@string/depth" />
 
                     <EditText
-                        android:id="@+id/et_OxygenPercentage_3"
+                        android:id="@+id/et_Depth3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:inputType="number" />
                 </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="-15dp"
-                    android:textSize="11sp"
-                    android:text="@string/oxygen_gas_mixture" />
 
-                <LinearLayout
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/btn_Trimix3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/ppo2_interest" />
-
-                    <EditText
-                        android:id="@+id/et_UserPpo_3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:inputType="numberDecimal" />
-                </LinearLayout>
+                    android:checked="false"
+                    android:text="@string/trimix"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="-15dp"
                     android:textSize="11sp"
-                    android:text="@string/custom_po2" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:textColor="@color/text_color"
-                        android:text="@string/mod_user" />
-
-                    <EditText
-                        android:id="@+id/et_Result_Mod_3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:enabled="false"
-                        android:textColor="@color/text_color" />
-                </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="-15dp"
-                    android:textSize="11sp"
-                    android:text="@string/for_custom_po2" />
+                    android:text="@string/activate_trimix" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="13dp"
                     android:background="@color/primary_light"
@@ -655,13 +564,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_12" />
+                        android:text="@string/mix_12" />
 
                     <EditText
                         android:id="@+id/et_Ppo_12_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -685,13 +594,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_14" />
+                        android:text="@string/mix_14" />
 
                     <EditText
                         android:id="@+id/et_Ppo_14_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -715,13 +624,43 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
-                        android:text="@string/mod_16" />
+                        android:text="@string/mix_16" />
 
                     <EditText
                         android:id="@+id/et_Ppo_16_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.7"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="-15dp"
+                    android:textSize="11sp"
+                    android:text="@string/operating_limit_decompression" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/recommended_mix" />
+
+                    <EditText
+                        android:id="@+id/et_recommended_mix3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
                         android:enabled="false"
                         android:textColor="@color/text_color" />
                 </LinearLayout>
@@ -732,13 +671,14 @@
                     android:layout_marginTop="-15dp"
                     android:layout_marginBottom="10dp"
                     android:textSize="11sp"
-                    android:text="@string/operating_limit_decompression" />
+                    android:text="@string/standard_mix" />
+
             </LinearLayout>
 
             <!-- Bloque Anuncios Admob -->
             <com.google.android.gms.ads.AdView
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/modAdmobBanner"
+                android:id="@+id/bestMixAdmobBanner"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -756,21 +696,19 @@
                 android:orientation="horizontal" >
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_addModBlock"
+                    android:id="@+id/btn_addBestMixBlock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="@string/add_block" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_calcMod"
+                    android:id="@+id/btn_calcBestMix"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="@string/calculate" />
-
             </LinearLayout>
-
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

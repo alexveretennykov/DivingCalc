@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_homeFragment_to_todFragment"
             app:destination="@id/todFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bestMixFragment"
+            app:destination="@id/bestMixFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gasDensityFragment"
+            app:destination="@id/gasDensityFragment" />
     </fragment>
 
     <fragment
@@ -53,4 +59,14 @@
         android:name="com.example.divecalculator.fragment.TodFragment"
         android:label="TodFragment"
         tools:layout="@layout/tod_fragment"/>
+    <fragment
+        android:id="@+id/bestMixFragment"
+        android:name="com.example.divecalculator.fragment.BestMixFragment"
+        android:label="BestMixFragment"
+        tools:layout="@layout/best_mix_fragment" />
+    <fragment
+        android:id="@+id/gasDensityFragment"
+        android:name="com.example.divecalculator.fragment.GasDensityFragment"
+        tools:layout="@layout/gas_density_fragment"
+        android:label="GasDensityFragment" />
 </navigation>

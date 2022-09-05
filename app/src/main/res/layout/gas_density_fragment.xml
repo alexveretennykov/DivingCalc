@@ -9,7 +9,7 @@
 
     <!-- Menu Superior -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/headerEndFragment"
+        android:id="@+id/headerDensityGasFragment"
         android:layout_width="match_parent"
         android:background="@color/primary"
         android:layout_height="50dp">
@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/end_long"
+            android:text="@string/gas_density"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/btn_infoEnd"
+            android:id="@+id/btn_infoGasDensity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
@@ -36,7 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/info_whats_is_end" />
+            android:contentDescription="@string/info_whats_is_gas_density" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -48,9 +48,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- END 1 -->
+            <!-- Gas Density 1 -->
             <LinearLayout
-                android:id="@+id/linearLayout_end1"
+                android:id="@+id/linearLayout_gas_density1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -65,7 +65,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/end_1"
+                        android:text="@string/gas_density_1"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -76,7 +76,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteEnd1"
+                        android:id="@+id/btn_deleteGasDensity1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -84,9 +84,30 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_end_1" />
-
+                        android:contentDescription="@string/delete_gas_density_1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/oxygen_percent" />
+
+                    <EditText
+                        android:id="@+id/et_OxygenPercentage_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:inputType="number" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -154,10 +175,58 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
+                        android:text="@string/gas_density" />
+
+                    <EditText
+                        android:id="@+id/et_GasDensity1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
                         android:text="@string/end_long" />
 
                     <EditText
-                        android:id="@+id/et_EndCalculated1"
+                        android:id="@+id/et_End1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/ppo2" />
+
+                    <EditText
+                        android:id="@+id/et_ppo_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -166,9 +235,9 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- END 2 -->
+            <!-- Gas Density 2 -->
             <LinearLayout
-                android:id="@+id/linearLayout_end2"
+                android:id="@+id/linearLayout_gas_density2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -183,19 +252,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/end_2"
+                        android:text="@string/gas_density_2"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.501"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteEnd2"
+                        android:id="@+id/btn_deleteGasDensity2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -203,8 +271,30 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_end_2" />
+                        android:contentDescription="@string/delete_gas_density_1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/oxygen_percent" />
+
+                    <EditText
+                        android:id="@+id/et_OxygenPercentage_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:inputType="number" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -272,10 +362,58 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
+                        android:text="@string/gas_density" />
+
+                    <EditText
+                        android:id="@+id/et_GasDensity2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
                         android:text="@string/end_long" />
 
                     <EditText
-                        android:id="@+id/et_EndCalculated2"
+                        android:id="@+id/et_End2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/ppo2" />
+
+                    <EditText
+                        android:id="@+id/et_ppo_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -284,9 +422,9 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- END 3 -->
+            <!-- Gas Density 3 -->
             <LinearLayout
-                android:id="@+id/linearLayout_end3"
+                android:id="@+id/linearLayout_gas_density3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -301,7 +439,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/end_3"
+                        android:text="@string/gas_density_3"
                         android:textAlignment="center"
                         android:textColor="@color/primary_ultra_dark"
                         android:textSize="18sp"
@@ -312,7 +450,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
-                        android:id="@+id/btn_deleteEnd3"
+                        android:id="@+id/btn_deleteGasDensity3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:src="@drawable/ic_remove"
@@ -320,7 +458,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:visibility="visible"
-                        android:contentDescription="@string/delete_end_3" />
+                        android:contentDescription="@string/delete_gas_density_1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
@@ -334,8 +472,30 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/helium_percent"
-                        android:textColor="@color/text_color" />
+                        android:textColor="@color/text_color"
+                        android:text="@string/oxygen_percent" />
+
+                    <EditText
+                        android:id="@+id/et_OxygenPercentage_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/helium_percent" />
 
                     <EditText
                         android:id="@+id/et_HeliumPercentage_3"
@@ -389,10 +549,58 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textColor="@color/text_color"
+                        android:text="@string/gas_density" />
+
+                    <EditText
+                        android:id="@+id/et_GasDensity3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
                         android:text="@string/end_long" />
 
                     <EditText
-                        android:id="@+id/et_EndCalculated3"
+                        android:id="@+id/et_End3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:enabled="false"
+                        android:textColor="@color/text_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_color"
+                        android:text="@string/ppo2" />
+
+                    <EditText
+                        android:id="@+id/et_ppo_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -404,7 +612,7 @@
             <!-- Bloque Anuncios Admob -->
             <com.google.android.gms.ads.AdView
                 xmlns:ads="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/endAdmobBanner"
+                android:id="@+id/gasDensityAdmobBanner"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -435,9 +643,9 @@
                     android:layout_margin="10dp"
                     android:text="@string/calculate" />
             </LinearLayout>
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
 
 </LinearLayout>

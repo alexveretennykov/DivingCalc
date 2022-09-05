@@ -69,6 +69,14 @@ class HomeFragment: Fragment() {
             navigateToCalculator(R.id.action_homeFragment_to_todFragment)
         }
 
+        binding.btnOptimalMix.setOnClickListener {
+            navigateToCalculator(R.id.action_homeFragment_to_bestMixFragment)
+        }
+
+        binding.btnGasDensity.setOnClickListener {
+            navigateToCalculator(R.id.action_homeFragment_to_gasDensityFragment)
+        }
+
         return binding.root
     }
 

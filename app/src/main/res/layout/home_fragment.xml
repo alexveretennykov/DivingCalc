@@ -41,7 +41,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+    <!-- Linea 1 -->
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
@@ -69,9 +69,9 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:text="SAC" />
-
     </LinearLayout>
 
+    <!-- Linea 2 -->
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -92,16 +92,17 @@
             android:layout_weight="1"
             android:text="EAD" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_End"
+        <Button
+            android:id="@+id/btn_Ndl"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:text="END" />
-
+            android:layout_marginStart="10dp"
+            android:clickable="false"
+            android:text="NDL" />
     </LinearLayout>
 
+    <!-- Linea 3 -->
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
@@ -115,24 +116,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-        <Button
-            android:id="@+id/btn_Ndl"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:clickable="false"
-            android:text="NDL" />
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_Tod"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:text="TOD" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_End"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="END" />
     </LinearLayout>
 
+    <!-- Linea 4 -->
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
@@ -146,23 +146,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_GasDensity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gas Density" />
+
         <Button
             android:id="@+id/btn_GasBlender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginStart="10dp"
             android:clickable="false"
             android:text="Gas Blender" />
+    </LinearLayout>
 
-        <Button
+    <!-- Linea 5 -->
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:flow_horizontalAlign="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_OptimalMix"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:clickable="false"
-            android:text="Optimal Gas Mix" />
+            android:text="Optimal Mix" />
 
+        <!-- TextView Vacio que alinea el boton OptimalMix -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

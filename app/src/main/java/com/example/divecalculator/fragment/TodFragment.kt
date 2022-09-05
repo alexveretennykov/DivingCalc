@@ -228,19 +228,19 @@ class TodFragment: Fragment() {
 
         if(map[TodProperty.ALTITUDE]?.text.toString() == "") {
             map[TodProperty.ALTITUDE]?.hint = resources.getString(R.string.required)
-            map[TodProperty.ALTITUDE]?.setHintTextColor(resources.getColor(R.color.red))
+            map[TodProperty.ALTITUDE]?.setHintTextColor(resources.getColor(R.color.orange_red))
             result = false
         }
 
         if(map[TodProperty.DEPTH]?.text.toString() == ""){
             map[TodProperty.DEPTH]?.hint = resources.getString(R.string.required)
-            map[TodProperty.DEPTH]?.setHintTextColor(resources.getColor(R.color.red))
+            map[TodProperty.DEPTH]?.setHintTextColor(resources.getColor(R.color.orange_red))
             result = false
         }
 
         if(map[TodProperty.USER_STOP]?.text.toString() == ""){
             map[TodProperty.USER_STOP]?.hint = resources.getString(R.string.required)
-            map[TodProperty.USER_STOP]?.setHintTextColor(resources.getColor(R.color.red))
+            map[TodProperty.USER_STOP]?.setHintTextColor(resources.getColor(R.color.orange_red))
             result = false
         }
 
@@ -305,7 +305,7 @@ class TodFragment: Fragment() {
         }
     }
 
-    // Dialogo con la Info de EAD
+    // Dialogo con la Info de TOD
     private fun dialogInfoTod() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(getString(R.string.what_is_tod))

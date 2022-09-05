@@ -177,13 +177,13 @@ class EadFragment: Fragment() {
 
         if(map[EadProperty.USER_O2]?.text.toString() == "") {
             map[EadProperty.USER_O2]?.hint = resources.getString(R.string.required)
-            map[EadProperty.USER_O2]?.setHintTextColor(resources.getColor(R.color.red))
+            map[EadProperty.USER_O2]?.setHintTextColor(resources.getColor(R.color.orange_red))
             result = false
         }
 
         if(map[EadProperty.USER_DEPTH]?.text.toString() == ""){
             map[EadProperty.USER_DEPTH]?.hint = resources.getString(R.string.required)
-            map[EadProperty.USER_DEPTH]?.setHintTextColor(resources.getColor(R.color.red))
+            map[EadProperty.USER_DEPTH]?.setHintTextColor(resources.getColor(R.color.orange_red))
             result = false
         }
 
